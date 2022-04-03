@@ -1,11 +1,11 @@
-import React from "react";
+import { TasksView } from "./views/TasksView";
 
 import "./App.css";
 
 export const App = () => {
   return (
     <div className="App">
-      <h1>Test</h1>
+      <TasksView />
     </div>
   );
 };

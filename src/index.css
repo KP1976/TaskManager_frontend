@@ -1,3 +1,18 @@
+:root {
+  --primary-color: hsl(208, 58%, 14%);
+  --secondary-color: hsl(201, 53%, 40%);
+  --third-color: hsl(201, 31%, 56%);
+
+  --recreation-color: hsl(36, 81%, 50%);
+  --technology-color: hsl(65, 78%, 57%);
+  --personal-color: hsl(0, 78%, 57%);
+  --food-color: hsl(130, 78%, 57%);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 @import-normalize;
 
 body {
