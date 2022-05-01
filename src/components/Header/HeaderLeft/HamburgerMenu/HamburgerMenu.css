@@ -1,28 +1,28 @@
-.hamburger-menu {
+.HamburgerMenu {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 1.5rem;
 }
 
-.hamburger-menu__top,
-.hamburger-menu__middle,
-.hamburger-menu__bottom {
+.HamburgerMenu__top,
+.HamburgerMenu__middle,
+.HamburgerMenu__bottom {
   background-color: white;
   border-radius: 1px;
   height: 0.125rem;
 }
 
-.hamburger-menu__top,
-.hamburger-menu__bottom {
-  width: 0.75rem;
+.HamburgerMenu__top,
+.HamburgerMenu__bottom {
+  width: 1rem;
 }
 
-.hamburger-menu__top,
-.hamburger-menu__middle {
+.HamburgerMenu__top,
+.HamburgerMenu__middle {
   margin-bottom: 0.25rem;
 }
 
-.hamburger-menu__bottom {
+.HamburgerMenu__bottom {
   margin-left: auto;
 }

@@ -1,7 +1,9 @@
-import {CategoryList} from "./CategoryList/CategoryList";
+import { CategoryList } from "./CategoryList/CategoryList";
+
+import "./HeaderRight.css";
 
 export const HeaderRight = () => (
-  <div className="HeaderLeft">
+  <div className="HeaderRight">
     <CategoryList />
   </div>
 );

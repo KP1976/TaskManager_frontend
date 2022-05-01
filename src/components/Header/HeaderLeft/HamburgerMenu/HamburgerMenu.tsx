@@ -1,9 +1,9 @@
 import "./HamburgerMenu.css";
 
 export const HamburgerMenu = () => (
-  <div className="hamburger-menu">
-    <div className="hamburger-menu__top"></div>
-    <div className="hamburger-menu__middle"></div>
-    <div className="hamburger-menu__bottom"></div>
+  <div className="HamburgerMenu">
+    <div className="HamburgerMenu__top"></div>
+    <div className="HamburgerMenu__middle"></div>
+    <div className="HamburgerMenu__bottom"></div>
   </div>
 );

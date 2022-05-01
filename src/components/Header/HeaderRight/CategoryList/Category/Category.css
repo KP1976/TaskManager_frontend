@@ -1,0 +1,27 @@
+.Category {
+  align-items: center;
+  background-color: var(--primary-color);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  line-height: 1;
+  padding: 0.625rem 0 0.625rem 0.75rem;
+  width: 8rem;
+}
+
+.Category__number {
+  color: var(--secondary-color);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-right: 0.5rem;
+  text-align: right;
+  width: 1.1875rem;
+}
+
+.Category__name {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1;
+}
