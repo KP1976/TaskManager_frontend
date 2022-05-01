@@ -1,5 +1,8 @@
+import "./LineUnderTitle.css";
+
 export const LineUnderTitle = () => (
   <svg
+    className="title-underline"
     width="159"
     height="18"
     viewBox="0 0 159 18"
