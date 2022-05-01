@@ -1,15 +1,11 @@
-import { HamburgerMenu } from "./HamburgerMenu/HamburgerMenu";
-import { Category } from "./Category/Category";
-import { Title } from "./Title/Title";
-import { Date } from "./Date/Date";
+import {HeaderLeft} from "./HeaderLeft/HeaderLeft";
+import {HeaderRight} from "./HeaderRight/HeaderRight";
 
 import "./Header.css";
 
 export const Header = () => (
   <div className="Header">
-    <HamburgerMenu />
-    <Category />
-    <Title />
-    <Date />
+    <HeaderLeft />
+    <HeaderRight />
   </div>
 );

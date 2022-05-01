@@ -1,0 +1,28 @@
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1.5rem;
+}
+
+.hamburger-menu__top,
+.hamburger-menu__middle,
+.hamburger-menu__bottom {
+  background-color: white;
+  border-radius: 1px;
+  height: 0.125rem;
+}
+
+.hamburger-menu__top,
+.hamburger-menu__bottom {
+  width: 0.75rem;
+}
+
+.hamburger-menu__top,
+.hamburger-menu__middle {
+  margin-bottom: 0.25rem;
+}
+
+.hamburger-menu__bottom {
+  margin-left: auto;
+}
