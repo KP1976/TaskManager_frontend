@@ -1,0 +1,13 @@
+.Task__icons {
+  align-items: flex-end;
+  display: flex;
+  margin-left: auto;
+}
+
+.icon {
+  margin-right: 0.5rem;
+}
+
+.icon:last-child {
+  margin-right: 0;
+}

@@ -1,0 +1,47 @@
+.Task {
+  border-bottom: 1px solid var(--third-color);
+  display: flex;
+  padding: 1rem 0;
+}
+
+.Task:first-child {
+  padding-top: 0;
+}
+
+.icon-container {
+  border: 1px solid var(--third-color);
+  border-radius: 50%;
+  display: flex;
+  height: 2.5rem;
+  margin-right: 1.5rem;
+  place-content: center;
+  width: 2.5rem;
+}
+
+.fa-laptop-code {
+  width: 1.25rem;
+}
+
+.fa-running,
+.fa-pizza-slice,
+.fa-user-tie {
+  width: 1rem;
+}
+
+.Task__texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Task__title {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.Task__date {
+  color: var(--third-color);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
