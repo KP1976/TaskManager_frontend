@@ -1,4 +1,4 @@
-import {Task} from "./Task/Task";
+import { Task } from "./Task/Task";
 
 import "./TaskList.css";
 
@@ -44,7 +44,7 @@ const fakeTasks: Task[] = [
 export const TaskList = () => (
   <ul className="TaskList">
     {fakeTasks.map((task) => (
-      <Task {...task} key={task.id}/>
+      <Task {...task} key={task.id} />
     ))}
   </ul>
 );
