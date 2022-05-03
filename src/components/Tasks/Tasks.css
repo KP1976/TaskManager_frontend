@@ -4,6 +4,28 @@
 
 .Tasks__title {
   font-size: 0.875rem;
+  line-height: 1;
   margin: 0;
   text-transform: uppercase;
+}
+
+.Tasks__title:nth-child(3) {
+  display: inline-block;
+}
+
+.Tasks__quantity-done-tasks {
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  display: inline-flex;
+  height: 1.375rem;
+  margin-left: 0.875rem;
+  place-content: center;
+  place-items: center;
+  width: 1.375rem;
+}
+
+.Tasks__quantity-done-tasks span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
 }
