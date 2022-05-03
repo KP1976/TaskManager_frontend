@@ -9,5 +9,6 @@ export const Tasks = () => (
     <div className="Tasks__quantity-done-tasks">
       <span>36</span>
     </div>
+    <div className="Tasks__add-task-button">+</div>
   </main>
 );
