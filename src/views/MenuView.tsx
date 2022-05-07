@@ -1,7 +1,3 @@
-import { MobileMenu } from "../components/MobileMenu/MobileMenu";
+import {MobileMenu} from "../components/MobileMenu/MobileMenu";
 
-export const MenuView = () => (
-  <>
-    <MobileMenu />
-  </>
-);
+export const MenuView = () => <MobileMenu/>;
