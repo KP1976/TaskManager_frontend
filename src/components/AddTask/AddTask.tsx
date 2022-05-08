@@ -1,4 +1,5 @@
 import {AddTaskForm} from "./AddTaskForm/AddTaskForm";
+import {AddTaskCategoryIcon} from "./AddTaskForm/AddTaskCategoryIcon/AddTaskCategoryIcon";
 
 import "./AddTask.css";
 
@@ -25,6 +26,7 @@ export const AddTask = () => (
       </defs>
     </svg>
     <h2 className="AddTask__title">dodaj nowe zdanie</h2>
+    <AddTaskCategoryIcon category={"technologia"}/>
     <AddTaskForm/>
   </div>
 );

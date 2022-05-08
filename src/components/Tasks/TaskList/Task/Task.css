@@ -8,26 +8,6 @@
   padding-top: 0;
 }
 
-.icon-container {
-  border: 1px solid var(--third-color);
-  border-radius: 50%;
-  display: flex;
-  height: 2.5rem;
-  margin-right: 1.5rem;
-  place-content: center;
-  width: 2.5rem;
-}
-
-.fa-laptop-code {
-  width: 1.25rem;
-}
-
-.fa-running,
-.fa-pizza-slice,
-.fa-user-tie {
-  width: 1rem;
-}
-
 .Task__texts {
   display: flex;
   flex-direction: column;

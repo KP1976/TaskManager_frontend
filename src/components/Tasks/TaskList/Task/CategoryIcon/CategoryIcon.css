@@ -1,1 +1,19 @@
+.CategoryIcon {
+  border: 1px solid var(--third-color);
+  border-radius: 50%;
+  display: flex;
+  height: 2.5rem;
+  margin-right: 1.5rem;
+  place-content: center;
+  width: 2.5rem;
+}
 
+.CategoryIcon .fa-laptop-code {
+  width: 1.25rem;
+}
+
+.CategoryIcon .fa-running,
+.CategoryIcon .fa-pizza-slice,
+.CategoryIcon .fa-user-tie {
+  width: 1rem;
+}

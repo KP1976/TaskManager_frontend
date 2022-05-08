@@ -3,7 +3,7 @@ import {AddTaskFormCategory} from "./AddTaskCategory/AddTaskFormCategory";
 import "./AddTaskFormCategories.css";
 
 export const AddTaskFormCategories = () => (
-  <ul className="AddTaskForm__categories">
+  <ul className="AddTaskFormCategories">
     <AddTaskFormCategory
       categoryName={"rekreacja"}
       categoryDotColor={"orange"}

@@ -11,13 +11,13 @@ export const AddTaskFormCategory = ({
                                       categoryDotColor,
                                       isActive,
                                     }: Props) => (
-  <li className="AddTaskForm__category">
-    <span className="AddTaskForm__category-title">{categoryName}</span>
+  <li className="AddTaskFormCategory">
+    <span className="AddTaskFormCategory__name">{categoryName}</span>
     <div
-      className={`AddTaskForm__category-dot AddTaskForm__category-dot--${categoryDotColor}`}
+      className={`AddTaskFormCategory__dot AddTaskFormCategory__dot--${categoryDotColor}`}
     ></div>
     <input
-      className="AddTaskForm__category-checkbox"
+      className="AddTaskFormCategory__checkbox"
       type="checkbox"
       checked={isActive}
     />

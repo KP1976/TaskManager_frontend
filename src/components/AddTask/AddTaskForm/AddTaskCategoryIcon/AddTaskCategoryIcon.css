@@ -1,0 +1,19 @@
+.AddTaskCategoryIcon {
+  border: 1px solid var(--third-color);
+  border-radius: 50%;
+  display: flex;
+  place-content: center;
+  height: 3rem;
+  margin: 2.5rem auto 0;
+  width: 3rem;
+}
+
+.AddTaskCategoryIcon .fa-laptop-code {
+  width: 1.5rem;
+}
+
+.AddTaskCategoryIcon .fa-running,
+.AddTaskCategoryIcon .fa-pizza-slice,
+.AddTaskCategoryIcon .fa-user-tie {
+  width: 1.25rem;
+}

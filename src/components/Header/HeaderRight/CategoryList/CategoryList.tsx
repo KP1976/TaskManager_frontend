@@ -1,5 +1,5 @@
 import "./CategoryList.css";
-import { Category } from "./Category/Category";
+import {Category} from "./Category/Category";
 
 export const CategoryList = () => (
   <ul className="CategoryList">

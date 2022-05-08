@@ -1,14 +1,14 @@
-import "./CategoryIcon.css";
+import "./AddTaskCategoryIcon.css";
 
 interface Props {
   category: string;
 }
 
-export const CategoryIcon = ({category}: Props) => {
+export const AddTaskCategoryIcon = ({category}: Props) => {
   switch (category) {
     case "technologia":
       return (
-        <div className="CategoryIcon">
+        <div className="AddTaskCategoryIcon">
           <svg
             focusable="false"
             data-prefix="fas"
@@ -27,7 +27,7 @@ export const CategoryIcon = ({category}: Props) => {
       );
     case "rekreacja":
       return (
-        <div className="CategoryIcon">
+        <div className="AddTaskCategoryIcon">
           <svg
             focusable="false"
             data-prefix="fas"
@@ -46,7 +46,7 @@ export const CategoryIcon = ({category}: Props) => {
       );
     case "jedzenie":
       return (
-        <div className="CategoryIcon">
+        <div className="AddTaskCategoryIcon">
           <svg
             focusable="false"
             data-prefix="fas"
@@ -65,7 +65,7 @@ export const CategoryIcon = ({category}: Props) => {
       );
     case "osobiste":
       return (
-        <div className="CategoryIcon">
+        <div className="AddTaskCategoryIcon">
           <svg
             focusable="false"
             data-prefix="fas"

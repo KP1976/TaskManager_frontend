@@ -1,0 +1,16 @@
+.AddTask {
+  padding: 1.5rem 2rem 4rem;
+}
+
+.AddTask__back-icon {
+  position: fixed;
+}
+
+.AddTask__title {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
