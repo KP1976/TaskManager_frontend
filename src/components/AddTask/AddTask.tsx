@@ -1,5 +1,5 @@
-import {AddTaskForm} from "./AddTaskForm/AddTaskForm";
-import {AddTaskCategoryIcon} from "./AddTaskForm/AddTaskCategoryIcon/AddTaskCategoryIcon";
+import { AddTaskForm } from "./AddTaskForm/AddTaskForm";
+import { AddTaskCategoryIcon } from "./AddTaskForm/AddTaskCategoryIcon/AddTaskCategoryIcon";
 
 import "./AddTask.css";
 
@@ -21,12 +21,12 @@ export const AddTask = () => (
       </g>
       <defs>
         <clipPath id="clip0_21_72">
-          <rect width="13.6" height="16" fill="white"/>
+          <rect width="13.6" height="16" fill="white" />
         </clipPath>
       </defs>
     </svg>
     <h2 className="AddTask__title">dodaj nowe zdanie</h2>
-    <AddTaskCategoryIcon category={"technologia"}/>
-    <AddTaskForm/>
+    <AddTaskCategoryIcon category={"technologia"} />
+    <AddTaskForm />
   </div>
 );

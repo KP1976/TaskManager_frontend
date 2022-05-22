@@ -37,7 +37,7 @@ export const Icons = () => (
       />
       <defs>
         <clipPath id="clip0_706_598">
-          <rect width="12" height="12" fill="white"/>
+          <rect width="12" height="12" fill="white" />
         </clipPath>
       </defs>
     </svg>

@@ -2,7 +2,7 @@ import { Task } from "./Task/Task";
 
 import "./TaskList.css";
 
-interface Task {
+interface TaskInterface {
   id: number;
   category: string;
   createdAt: string;
@@ -10,7 +10,7 @@ interface Task {
   isDone: boolean;
 }
 
-const fakeTasks: Task[] = [
+const fakeTasks: TaskInterface[] = [
   {
     id: 1,
     category: "technologia",

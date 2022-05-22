@@ -4,10 +4,12 @@ import { App } from "./App";
 
 import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById("root") as Element | DocumentFragment);
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as Element | DocumentFragment
+);
 
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
 );

@@ -1,4 +1,4 @@
-import {AddTaskFormCategory} from "./AddTaskCategory/AddTaskFormCategory";
+import { AddTaskFormCategory } from "./AddTaskCategory/AddTaskFormCategory";
 
 import "./AddTaskFormCategories.css";
 

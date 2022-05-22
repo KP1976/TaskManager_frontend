@@ -1,13 +1,13 @@
-import {TaskDone} from "./TaskDone/TaskDone";
+import { TaskDone } from "./TaskDone/TaskDone";
 import "./TasksDoneList.css";
 
-interface TaskDone {
+interface TaskDoneInterface {
   id: number;
   createdAt: string;
   title: string;
 }
 
-const fakeTasksDone: TaskDone[] = [
+const fakeTasksDone: TaskDoneInterface[] = [
   {
     id: 1,
     createdAt: "20.03.2022, 12:26:17",
@@ -38,7 +38,7 @@ const fakeTasksDone: TaskDone[] = [
 export const TasksDoneList = () => (
   <ul className="TasksDoneList">
     {fakeTasksDone.map((taskdone) => (
-      <TaskDone {...taskdone} key={taskdone.id}/>
+      <TaskDone {...taskdone} key={taskdone.id} />
     ))}
   </ul>
 );

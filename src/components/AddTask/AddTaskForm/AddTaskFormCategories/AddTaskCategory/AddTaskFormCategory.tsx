@@ -7,10 +7,10 @@ interface Props {
 }
 
 export const AddTaskFormCategory = ({
-                                      categoryName,
-                                      categoryDotColor,
-                                      isActive,
-                                    }: Props) => (
+  categoryName,
+  categoryDotColor,
+  isActive,
+}: Props) => (
   <li className="AddTaskFormCategory">
     <span className="AddTaskFormCategory__name">{categoryName}</span>
     <div

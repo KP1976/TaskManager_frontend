@@ -4,7 +4,7 @@ interface Props {
   category: string;
 }
 
-export const AddTaskCategoryIcon = ({category}: Props) => {
+export const AddTaskCategoryIcon = ({ category }: Props) => {
   switch (category) {
     case "technologia":
       return (
