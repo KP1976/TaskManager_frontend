@@ -40,6 +40,51 @@
   background-color: var(--food-color);
 }
 
-.AddTaskFormCategory__checkbox {
+.AddTaskFormCategory__radio-container {
+  cursor: pointer;
+  font-size: 0.75rem;
   margin-left: auto;
+  padding-left: 35px;
+  position: relative;
+  user-select: none;
+}
+
+.AddTaskFormCategory__radio-container .AddTaskFormCategory__radio:checked ~ .AddTaskFormCategory__checkmark:after {
+  display: block;
+}
+
+.AddTaskFormCategory__radio-container .AddTaskFormCategory__checkmark:after {
+  top: 2px;
+  right: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--third-color);
+}
+
+.AddTaskFormCategory__radio-container:hover ~ .AddTaskFormCategory__checkmark {
+  background-color: #ccc;
+}
+
+.AddTaskFormCategory__radio {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.AddTaskFormCategory__checkmark {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  height: 0.75rem;
+  right: 0;
+  top: -6px;
+  width: 0.75rem;
+}
+
+.AddTaskFormCategory__checkmark:after {
+  display: none;
+  content: "";
+  position: absolute;
 }

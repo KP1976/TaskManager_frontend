@@ -7,12 +7,12 @@ export const AddTaskFormCategories = () => (
     <AddTaskFormCategory
       categoryName={"rekreacja"}
       categoryDotColor={"orange"}
-      isActive={false}
+      isActive={true}
     />
     <AddTaskFormCategory
       categoryName={"technologia"}
       categoryDotColor={"yellow"}
-      isActive={true}
+      isActive={false}
     />
     <AddTaskFormCategory
       categoryName={"osobiste"}
