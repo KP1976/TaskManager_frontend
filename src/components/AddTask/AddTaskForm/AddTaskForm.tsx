@@ -2,15 +2,29 @@ import { AddTaskFormCategories } from "./AddTaskFormCategories/AddTaskFormCatego
 
 import "./AddTaskForm.css";
 
-export const AddTaskForm = () => (
-  <form className="AddTaskForm">
-    <AddTaskFormCategories />
+interface Props {
+  grandFather: (value: string) => void;
+}
 
-    <label className="AddTaskForm__label" htmlFor="task-title">
-      Nazwa zadania
-      <input className="AddTaskForm__title-input" id="task-title" type="text" />
-    </label>
+export const AddTaskForm = ({ grandFather }: Props) => {
+  const parent = (value: string) => {
+    grandFather(value);
+  };
 
-    <button className="AddTaskForm__submit-button">dodaj zadanie</button>
-  </form>
-);
+  return (
+    <form className="AddTaskForm">
+      <AddTaskFormCategories parent={parent} />
+
+      <label className="AddTaskForm__label" htmlFor="task-title">
+        Nazwa zadania
+        <input
+          className="AddTaskForm__title-input"
+          id="task-title"
+          type="text"
+        />
+      </label>
+
+      <button className="AddTaskForm__submit-button">dodaj zadanie</button>
+    </form>
+  );
+};

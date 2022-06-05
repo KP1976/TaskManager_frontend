@@ -1,41 +1,37 @@
-import { FormEvent, useState } from "react";
+import { ChangeEvent } from "react";
 
 import "./AddTaskFormCategory.css";
 
 interface Props {
   categoryName: string;
   categoryDotColor: string;
-  isActive: boolean;
+  id: string;
+  isRadioSelected: (value: string) => boolean;
+  handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const AddTaskFormCategory = ({
   categoryName,
   categoryDotColor,
-  isActive,
+  id,
+  isRadioSelected,
+  handleChange,
 }: Props) => {
-  const [active, setActive] = useState(isActive);
-
-  const handleChange = (e: FormEvent) => {
-    setActive((e.target as HTMLInputElement).checked);
-  };
-
   return (
     <li className="AddTaskFormCategory">
       <span className="AddTaskFormCategory__name">{categoryName}</span>
       <div
         className={`AddTaskFormCategory__dot AddTaskFormCategory__dot--${categoryDotColor}`}
       ></div>
-      <label
-        className="AddTaskFormCategory__radio-container"
-        htmlFor={categoryName}
-      >
+      <label className="AddTaskFormCategory__radio-container" htmlFor={id}>
         <input
           className="AddTaskFormCategory__radio"
-          checked={active}
-          id={categoryName}
-          name="category"
+          checked={isRadioSelected(categoryName)}
           onChange={handleChange}
           type="radio"
+          name="category"
+          value={categoryName}
+          id={id}
         />
         <span className="AddTaskFormCategory__checkmark"></span>
       </label>
