@@ -1,6 +1,6 @@
 .Tasks {
   padding: 1rem 1.5rem 1.5rem;
-  display: none;
+  /*display: none;*/
 }
 
 .Tasks__title {
@@ -34,13 +34,16 @@
 
 .Tasks__add-task-button {
   background-color: var(--secondary-color);
+  border: none;
   border-radius: 50%;
   bottom: 1.5rem;
   box-shadow: 0 5px 10px hsla(208, 58%, 14%, 40%);
+  color: white;
+  font-family: 'Roboto', sans-serif;
   font-size: 2.25rem;
   font-weight: 300;
   height: 3rem;
-  line-height: 3rem;
+  line-height: 2rem;
   position: absolute;
   right: 1.5rem;
   text-align: center;

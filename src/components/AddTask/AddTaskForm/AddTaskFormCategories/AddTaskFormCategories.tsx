@@ -2,7 +2,6 @@ import { ChangeEvent, useState } from "react";
 import { AddTaskFormCategory } from "./AddTaskCategory/AddTaskFormCategory";
 
 import "./AddTaskFormCategories.css";
-import "./AddTaskCategory/AddTaskFormCategory.css";
 
 interface Props {
   parent: (value: string) => void;

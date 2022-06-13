@@ -1,8 +1,21 @@
 .AddTask {
+  background-color: var(--primary-color);
+  height: 100vh;
   padding: 1.5rem 2rem 4rem;
+  position: absolute;
+  transform: translateX(100%);
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+}
+
+.AddTask.show {
+  transform: translateX(0);
 }
 
 .AddTask__back-icon {
+  background-color: transparent;
+  border: none;
+  padding: 0;
   position: fixed;
 }
 
