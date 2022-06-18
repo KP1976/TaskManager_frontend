@@ -1,7 +1,11 @@
 .HamburgerMenu {
+  background-color: transparent;
+  border: none;
   display: flex;
   flex-direction: column;
+  height: 0.875rem;
   justify-content: space-between;
+  padding: 0;
   position: fixed;
   width: 1.5rem;
 }
@@ -12,6 +16,9 @@
   background-color: white;
   border-radius: 1px;
   height: 0.125rem;
+  position: absolute;
+  transform-origin: left;
+  transition: all 0.3s ease-in;
 }
 
 .HamburgerMenu__top,
@@ -19,11 +26,31 @@
   width: 1rem;
 }
 
-.HamburgerMenu__top,
 .HamburgerMenu__middle {
-  margin-bottom: 0.25rem;
+  top: 0.375rem;
+  width: 1.5rem;
+}
+
+.HamburgerMenu__bottom {
+  top: 0.75rem;
+  right: 0;
 }
 
 .HamburgerMenu__bottom {
   margin-left: auto;
+}
+
+.turn-right {
+  transform: rotate(45deg);
+  width: 1.5rem;
+}
+
+.turn-left {
+  top: 1.05rem;
+  transform: rotate(-45deg);
+  width: 1.5rem;
+}
+
+.vanished {
+  width: 0;
 }
