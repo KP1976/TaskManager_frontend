@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { AddTaskForm } from "./AddTaskForm/AddTaskForm";
 import { AddTaskCategoryIcon } from "./AddTaskForm/AddTaskCategoryIcon/AddTaskCategoryIcon";
-import { AddTaskContext } from "../../Context/AddTaskContext";
+import { AddTaskContext } from "../../context/AddTaskContext";
 
 import "./AddTask.css";
 

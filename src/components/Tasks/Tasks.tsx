@@ -1,6 +1,6 @@
 import { TaskList } from "./TaskList/TaskList";
 import { useContext } from "react";
-import { AddTaskContext } from "../../Context/AddTaskContext";
+import { AddTaskContext } from "../../context/AddTaskContext";
 
 import "./Tasks.css";
 
