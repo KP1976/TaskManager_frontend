@@ -4,10 +4,10 @@ import { Icons } from "./Icons/Icons";
 import "./Task.css";
 
 interface Props {
-  id: number;
-  category: string;
-  createdAt: string;
+  id: string;
   title: string;
+  createdAt: string | Date;
+  category: string;
   isDone: boolean;
 }
 

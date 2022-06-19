@@ -1,11 +1,11 @@
 import { TaskList } from "./TaskList/TaskList";
 import { useContext } from "react";
-import { AddTaskContext } from "../../Context/AddTaskContext";
+import { AddTaskAndMobileMenuContext } from "../../context/AddTaskAndMobileMenuContext";
 
 import "./Tasks.css";
 
 export const Tasks = () => {
-  const { setAddTaskIsOpen } = useContext(AddTaskContext);
+  const { setAddTaskIsOpen } = useContext(AddTaskAndMobileMenuContext);
 
   const showAddTask = () => {
     setAddTaskIsOpen(true);
