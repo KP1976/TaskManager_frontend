@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { AddTaskForm } from "./AddTaskForm/AddTaskForm";
 import { AddTaskCategoryIcon } from "./AddTaskForm/AddTaskCategoryIcon/AddTaskCategoryIcon";
-import { AddTaskContext } from "../../context/AddTaskContext";
+import { AddTaskAndMobileMenuContext } from "../../context/AddTaskAndMobileMenuContext";
 
 import "./AddTask.css";
 
@@ -10,7 +10,7 @@ interface Props {
 }
 
 export const AddTask = ({ isOpen }: Props) => {
-  const { setAddTaskIsOpen } = useContext(AddTaskContext);
+  const { setAddTaskIsOpen } = useContext(AddTaskAndMobileMenuContext);
   const [categoryFinal, setCategoryFinal] = useState("rekreacja");
 
   const grandFather = (value: string) => {

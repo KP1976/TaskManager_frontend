@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-export const AddTaskContext = createContext({
+export const AddTaskAndMobileMenuContext = createContext({
   addTaskIsOpen: false,
   setAddTaskIsOpen: (open: boolean) => {
     console.log(open);

@@ -1,13 +1,14 @@
-import { useContext, useRef } from "react";
-
 import "./HamburgerMenu.css";
-import { AddTaskContext } from "../../../../context/AddTaskContext";
+import { AddTaskAndMobileMenuContext } from "../../../../context/AddTaskAndMobileMenuContext";
+import { useContext, useRef } from "react";
 
 export const HamburgerMenu = () => {
   const topBarMenu = useRef<HTMLDivElement>(null);
   const middleBarMenu = useRef<HTMLDivElement>(null);
   const bottomBarMenu = useRef<HTMLDivElement>(null);
-  const { mobileMenuIsOpen, setMobileMenuIsOpen } = useContext(AddTaskContext);
+  const { mobileMenuIsOpen, setMobileMenuIsOpen } = useContext(
+    AddTaskAndMobileMenuContext
+  );
 
   const toggleMobileMenu = () => {
     topBarMenu.current?.classList.toggle("turn-right");
