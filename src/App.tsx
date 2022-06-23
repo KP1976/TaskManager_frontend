@@ -10,7 +10,7 @@ import "./App.css";
 interface Task {
   id: string;
   title: string;
-  createdAt: string | Date;
+  createdAt: string;
   category: string;
   isDone: boolean;
 }
