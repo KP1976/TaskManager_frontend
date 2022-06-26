@@ -6,28 +6,36 @@ import "./Task.css";
 interface Props {
   id: string;
   title: string;
-  createdAt: string;
+  createdAt: Date;
   category: string;
   isDone: boolean;
 }
 
 export const Task = (props: Props) => {
-  const { category, title, createdAt } = props;
-  const dateArray: string[] = createdAt.split(/[-T.]/);
+  const { id, category, title, createdAt } = props;
+  const formatedDate = new Date(createdAt);
 
-  dateArray.pop();
+  const date =
+    ("0" + String(formatedDate.getDate())).slice(-2) +
+    "." +
+    ("0" + String(formatedDate.getMonth() + 1)).slice(-2) +
+    "." +
+    String(formatedDate.getFullYear()) +
+    ", " +
+    ("0" + String(formatedDate.getHours())).slice(-2) +
+    ":" +
+    ("0" + String(formatedDate.getMinutes())).slice(-2) +
+    ":" +
+    ("0" + String(formatedDate.getSeconds())).slice(-2);
 
-  const [year, month, day, time] = dateArray;
   return (
     <li className="Task">
       <CategoryIcon category={category} />
       <div className="Task__texts">
         <h3 className="Task__title">{title}</h3>
-        <span className="Task__date">
-          {day}.{month}.{year}, {time}
-        </span>
+        <span className="Task__date">{date}</span>
       </div>
-      <Icons />
+      <Icons taskId={id} />
     </li>
   );
 };

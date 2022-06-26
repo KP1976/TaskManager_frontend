@@ -3,11 +3,9 @@ import { createContext } from "react";
 interface Task {
   id: string;
   title: string;
-  createdAt: string;
+  createdAt: Date;
   category: string;
   isDone: boolean;
 }
 
-const tasks: Task[] = [];
-
-export const TasksContext = createContext<Task[]>(tasks);
+export const TasksContext = createContext<Task[]>([]);

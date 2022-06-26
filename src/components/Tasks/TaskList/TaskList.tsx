@@ -38,6 +38,7 @@ import "./Task/Task.css";
 
 export const TaskList = () => {
   const tasks = useContext(TasksContext);
+
   console.log(tasks);
 
   return (
