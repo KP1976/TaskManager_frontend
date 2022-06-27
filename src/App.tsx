@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AddTaskAndMobileMenuContext } from "./context/AddTaskAndMobileMenuContext";
 import { TasksContext } from "./context/TasksContext";
+import { TaskIdToDeleteContext } from "./context/TaskIdToDeleteContext";
 import { MenuView } from "./views/MenuView";
 import { TasksView } from "./views/TasksView";
 import { AddTaskView } from "./views/AddTaskView";
@@ -41,7 +42,9 @@ export const App = () => {
       >
         <div className="App">
           <MenuView open={mobileMenuIsOpen} />
-          <TasksView />
+          <TaskIdToDeleteContext.Provider value={""}>
+            <TasksView />
+          </TaskIdToDeleteContext.Provider>
           <AddTaskView open={addTaskIsOpen} />
         </div>
       </AddTaskAndMobileMenuContext.Provider>

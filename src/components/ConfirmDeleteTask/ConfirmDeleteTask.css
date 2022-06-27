@@ -1,0 +1,48 @@
+.ConfirmDeleteTask {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  display: none;
+  left: 50%;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 66.6666%;
+}
+
+.ConfirmDeleteTask__question {
+  margin: 0 auto 1rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  width: 90%;
+}
+
+.ConfirmDeleteTask__buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ConfirmDeleteTask__button {
+  border: none;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  height: 1.5rem;
+  text-transform: uppercase;
+  width: 5rem;
+}
+
+.isVisible {
+  display: block;
+}
+
+svg {
+  pointer-events: none;
+}
+
+svg path {
+  pointer-events: none;
+}

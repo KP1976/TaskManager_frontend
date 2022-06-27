@@ -1,23 +1,34 @@
+import { SyntheticEvent } from "react";
+
 import "./Icons.css";
 
 interface Props {
   taskId: string;
+  parent: (value: string) => void;
 }
 
-export const Icons = ({ taskId }: Props) => {
+export const Icons = ({ parent, taskId }: Props) => {
   const makeTaskDone = () => {};
   const modifyTask = () => {};
-  const deleteTask = () => {
-    void (async () => {
-      try {
-        await fetch(`http://localhost:3001/api/tasks/${taskId}`, {
-          method: "DELETE",
-        });
-        location.reload();
-      } catch (err) {
-        console.log({ err });
-      }
-    })();
+  const deleteTask = (e: SyntheticEvent<HTMLButtonElement>) => {
+    const confirmDeleteModal =
+      e.currentTarget.parentElement?.parentElement?.parentElement?.parentElement
+        ?.nextElementSibling;
+
+    parent(taskId);
+
+    confirmDeleteModal?.classList.add("isVisible");
+
+    // void (async () => {
+    //   try {
+    //     await fetch(`http://localhost:3001/api/tasks/${taskId}`, {
+    //       method: "DELETE",
+    //     });
+    //     location.reload();
+    //   } catch (err) {
+    //     console.log({ err });
+    //   }
+    // })();
   };
 
   return (
