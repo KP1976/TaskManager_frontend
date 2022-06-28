@@ -7,9 +7,42 @@ interface Props {
   parent: (value: string) => void;
 }
 
+interface Task {
+  id: string;
+  title: string;
+  createdAt: Date;
+  category: string;
+  isDone: boolean;
+}
+
 export const Icons = ({ parent, taskId }: Props) => {
-  const makeTaskDone = () => {};
-  const modifyTask = () => {};
+  const makeTaskDone = () => {
+    void (async () => {
+      try {
+        const response = await fetch(
+          `http://localhost:3001/api/tasks/${taskId}/1`,
+          {
+            method: "PATCH",
+            body: JSON.stringify({
+              id: taskId,
+              isDone: 1,
+            }),
+          }
+        );
+        const task = (await response.json()) as Task;
+
+        console.log(task);
+        location.reload();
+      } catch (err) {
+        console.log({ err });
+      }
+    })();
+
+    console.log("Zadanie zrobione...", taskId);
+  };
+  const modifyTask = () => {
+    console.log("Modyfikacja zadania...");
+  };
   const deleteTask = (e: SyntheticEvent<HTMLButtonElement>) => {
     const confirmDeleteModal =
       e.currentTarget.parentElement?.parentElement?.parentElement?.parentElement
@@ -18,17 +51,6 @@ export const Icons = ({ parent, taskId }: Props) => {
     parent(taskId);
 
     confirmDeleteModal?.classList.add("isVisible");
-
-    // void (async () => {
-    //   try {
-    //     await fetch(`http://localhost:3001/api/tasks/${taskId}`, {
-    //       method: "DELETE",
-    //     });
-    //     location.reload();
-    //   } catch (err) {
-    //     console.log({ err });
-    //   }
-    // })();
   };
 
   return (

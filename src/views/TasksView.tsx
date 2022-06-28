@@ -4,10 +4,10 @@ import { ConfirmDeleteTask } from "../components/ConfirmDeleteTask/ConfirmDelete
 import { useState } from "react";
 
 export const TasksView = () => {
-  const [taskIdToDelete, settaskIdToDelete] = useState("rekreacja");
+  const [taskIdToDelete, setTaskIdToDelete] = useState("");
 
   const grandGrandGrandFather = (value: string) => {
-    settaskIdToDelete(value);
+    setTaskIdToDelete(value);
   };
 
   return (

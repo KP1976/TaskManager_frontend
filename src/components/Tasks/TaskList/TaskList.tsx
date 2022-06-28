@@ -48,9 +48,11 @@ export const TaskList = ({ grandGrandFather }: Props) => {
 
   return (
     <ul className="TaskList">
-      {tasks.map((task) => (
-        <Task {...task} key={task.id} grandFather={grandFather} />
-      ))}
+      {tasks
+        .filter((task) => !task.isDone)
+        .map((task) => (
+          <Task {...task} key={task.id} grandFather={grandFather} />
+        ))}
     </ul>
   );
 };
