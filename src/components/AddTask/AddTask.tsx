@@ -10,7 +10,9 @@ interface Props {
 }
 
 export const AddTask = ({ isOpen }: Props) => {
-  const { setAddTaskIsOpen } = useContext(AddTaskAndMobileMenuContext);
+  const { setAddTaskIsOpen, isModifyTask, setIsModifyTask } = useContext(
+    AddTaskAndMobileMenuContext
+  );
   const [categoryFinal, setCategoryFinal] = useState("rekreacja");
 
   const grandFather = (value: string) => {
@@ -19,6 +21,7 @@ export const AddTask = ({ isOpen }: Props) => {
 
   const handleClick = () => {
     setAddTaskIsOpen(false);
+    setIsModifyTask(false);
   };
 
   return (
@@ -44,9 +47,11 @@ export const AddTask = ({ isOpen }: Props) => {
           </defs>
         </svg>
       </button>
-      <h2 className="AddTask__title">dodaj nowe zdanie</h2>
+      <h2 className="AddTask__title">
+        {isModifyTask ? "modyfikuj zadanie" : "dodaj nowe zadanie"}
+      </h2>
       <AddTaskCategoryIcon category={categoryFinal} />
-      <AddTaskForm grandFather={grandFather} />
+      <AddTaskForm grandFather={grandFather} isModifyTask={isModifyTask} />
     </div>
   );
 };

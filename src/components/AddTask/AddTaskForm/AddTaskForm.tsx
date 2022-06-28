@@ -4,9 +4,10 @@ import "./AddTaskForm.css";
 
 interface Props {
   grandFather: (value: string) => void;
+  isModifyTask: boolean;
 }
 
-export const AddTaskForm = ({ grandFather }: Props) => {
+export const AddTaskForm = ({ grandFather, isModifyTask }: Props) => {
   const parent = (value: string) => {
     grandFather(value);
   };
@@ -24,7 +25,9 @@ export const AddTaskForm = ({ grandFather }: Props) => {
         />
       </label>
 
-      <button className="AddTaskForm__submit-button">dodaj zadanie</button>
+      <button className="AddTaskForm__submit-button">
+        {isModifyTask ? "modyfikuj zadanie" : "dodaj zadanie"}
+      </button>
     </form>
   );
 };

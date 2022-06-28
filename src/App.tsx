@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { AddTaskAndMobileMenuContext } from "./context/AddTaskAndMobileMenuContext";
 import { TasksContext } from "./context/TasksContext";
-import { TaskIdToDeleteContext } from "./context/TaskIdToDeleteContext";
 import { MenuView } from "./views/MenuView";
 import { TasksView } from "./views/TasksView";
 import { AddTaskView } from "./views/AddTaskView";
@@ -19,6 +18,7 @@ interface Task {
 export const App = () => {
   const [addTaskIsOpen, setAddTaskIsOpen] = useState(false);
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
+  const [isModifyTask, setIsModifyTask] = useState(false);
   const [tasks, setTasks] = useState<Task[]>([]);
 
   useEffect(() => {
@@ -38,13 +38,13 @@ export const App = () => {
           setAddTaskIsOpen,
           mobileMenuIsOpen,
           setMobileMenuIsOpen,
+          isModifyTask,
+          setIsModifyTask,
         }}
       >
         <div className="App">
           <MenuView open={mobileMenuIsOpen} />
-          <TaskIdToDeleteContext.Provider value={""}>
-            <TasksView />
-          </TaskIdToDeleteContext.Provider>
+          <TasksView />
           <AddTaskView open={addTaskIsOpen} />
         </div>
       </AddTaskAndMobileMenuContext.Provider>

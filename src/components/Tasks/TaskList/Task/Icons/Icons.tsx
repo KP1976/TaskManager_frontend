@@ -1,4 +1,5 @@
-import { SyntheticEvent } from "react";
+import { SyntheticEvent, useContext } from "react";
+import { AddTaskAndMobileMenuContext } from "../../../../../context/AddTaskAndMobileMenuContext";
 
 import "./Icons.css";
 
@@ -16,6 +17,10 @@ interface Task {
 }
 
 export const Icons = ({ parent, taskId }: Props) => {
+  const { setAddTaskIsOpen, setIsModifyTask } = useContext(
+    AddTaskAndMobileMenuContext
+  );
+
   const makeTaskDone = () => {
     void (async () => {
       try {
@@ -37,11 +42,11 @@ export const Icons = ({ parent, taskId }: Props) => {
         console.log({ err });
       }
     })();
-
-    console.log("Zadanie zrobione...", taskId);
   };
   const modifyTask = () => {
-    console.log("Modyfikacja zadania...");
+    console.log("Modyfikacja zadania...", taskId);
+    setAddTaskIsOpen(true);
+    setIsModifyTask(true);
   };
   const deleteTask = (e: SyntheticEvent<HTMLButtonElement>) => {
     const confirmDeleteModal =
