@@ -43,11 +43,13 @@ export const Icons = ({ parent, taskId }: Props) => {
       }
     })();
   };
+
   const modifyTask = () => {
     console.log("Modyfikacja zadania...", taskId);
     setAddTaskIsOpen(true);
     setIsModifyTask(true);
   };
+
   const deleteTask = (e: SyntheticEvent<HTMLButtonElement>) => {
     const confirmDeleteModal =
       e.currentTarget.parentElement?.parentElement?.parentElement?.parentElement
