@@ -8,7 +8,6 @@ interface Props {
   title: string;
   createdAt: Date;
   category: string;
-  isDone: boolean;
   grandFather: (value: string) => void;
 }
 

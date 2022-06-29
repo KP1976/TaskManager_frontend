@@ -12,7 +12,7 @@ interface Task {
   title: string;
   createdAt: Date;
   category: string;
-  isDone: boolean;
+  isDone: number;
 }
 
 export const App = () => {
