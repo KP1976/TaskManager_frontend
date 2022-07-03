@@ -5,7 +5,7 @@ import { TasksContext } from "../../../../context/TasksContext";
 import "./CategoryList.css";
 
 export const CategoryList = () => {
-  const tasks = useContext(TasksContext);
+  const { tasks } = useContext(TasksContext);
   const categories = tasks.map((task) => task.category);
   const sumOfEachTaskCategory = {
     recreation: 0,

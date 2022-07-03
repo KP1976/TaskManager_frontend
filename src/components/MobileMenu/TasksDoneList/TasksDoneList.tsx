@@ -1,14 +1,8 @@
+import { useContext } from "react";
 import { TaskDone } from "./TaskDone/TaskDone";
 import { TasksContext } from "../../../context/TasksContext";
 
 import "./TasksDoneList.css";
-import { useContext } from "react";
-
-// interface TaskDoneInterface {
-//   id: number;
-//   createdAt: string;
-//   title: string;
-// }
 
 // const fakeTasksDone: TaskDoneInterface[] = [
 //   {
@@ -39,7 +33,7 @@ import { useContext } from "react";
 // ];
 
 export const TasksDoneList = () => {
-  const tasks = useContext(TasksContext);
+  const { tasks } = useContext(TasksContext);
   return (
     <ul className="TasksDoneList">
       {tasks

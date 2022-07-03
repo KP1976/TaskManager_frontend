@@ -1,11 +1,15 @@
 import { createContext } from "react";
+import { SingleTask } from "../interfaces/TaskInterface";
 
-interface Task {
-  id: string;
-  title: string;
-  createdAt: Date;
-  category: string;
-  isDone: number;
-}
-
-export const TasksContext = createContext<Task[]>([]);
+export const TasksContext = createContext({
+  tasks: [
+    {
+      id: "",
+      title: "",
+      createdAt: new Date(),
+      category: "",
+      isDone: 0,
+    },
+  ],
+  setTasks: (tasks: SingleTask[]) => {},
+});

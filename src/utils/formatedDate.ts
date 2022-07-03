@@ -2,7 +2,7 @@ export const formatedDate = (date: Date): string => {
   const newDate = new Date(date);
 
   return (
-    ("0" + String(newDate.getDate())).slice(-2) +
+    String(newDate.getDate()) +
     "." +
     ("0" + String(newDate.getMonth() + 1)).slice(-2) +
     "." +

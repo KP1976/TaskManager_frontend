@@ -8,14 +8,6 @@ interface Props {
   parent: (value: string) => void;
 }
 
-interface Task {
-  id: string;
-  title: string;
-  createdAt: Date;
-  category: string;
-  isDone: boolean;
-}
-
 export const Icons = ({ parent, taskId }: Props) => {
   const { setAddTaskIsOpen, setIsModifyTask } = useContext(
     AddTaskAndMobileMenuContext
@@ -34,9 +26,8 @@ export const Icons = ({ parent, taskId }: Props) => {
             }),
           }
         );
-        const task = (await response.json()) as Task;
+        await response.json();
 
-        console.log(task);
         location.reload();
       } catch (err) {
         console.log({ err });

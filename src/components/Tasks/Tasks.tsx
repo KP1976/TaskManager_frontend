@@ -11,7 +11,7 @@ interface Props {
 
 export const Tasks = ({ grandGrandGrandFather }: Props) => {
   const { setAddTaskIsOpen } = useContext(AddTaskAndMobileMenuContext);
-  const tasks = useContext(TasksContext);
+  const { tasks } = useContext(TasksContext);
 
   const sumOfTasksDone = tasks
     .map((task) => task.isDone)

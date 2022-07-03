@@ -4,34 +4,27 @@ import { TasksContext } from "./context/TasksContext";
 import { MenuView } from "./views/MenuView";
 import { TasksView } from "./views/TasksView";
 import { AddTaskView } from "./views/AddTaskView";
+import { SingleTask } from "./interfaces/TaskInterface";
 
 import "./App.css";
-
-interface Task {
-  id: string;
-  title: string;
-  createdAt: Date;
-  category: string;
-  isDone: number;
-}
 
 export const App = () => {
   const [addTaskIsOpen, setAddTaskIsOpen] = useState(false);
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
   const [isModifyTask, setIsModifyTask] = useState(false);
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [tasks, setTasks] = useState<SingleTask[]>([]);
 
   useEffect(() => {
     void (async () => {
       const response = await fetch("http://localhost:3001/api/tasks/");
-      const data = (await response.json()) as Task[];
+      const data = (await response.json()) as SingleTask[];
 
       setTasks(data);
     })();
   }, []);
 
   return (
-    <TasksContext.Provider value={tasks}>
+    <TasksContext.Provider value={{ tasks, setTasks }}>
       <AddTaskAndMobileMenuContext.Provider
         value={{
           addTaskIsOpen,

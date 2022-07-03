@@ -40,7 +40,7 @@ interface Props {
 // ];
 
 export const TaskList = ({ grandGrandFather }: Props) => {
-  const tasks = useContext(TasksContext);
+  const { tasks } = useContext(TasksContext);
 
   const grandFather = (value: string) => {
     grandGrandFather(value);
