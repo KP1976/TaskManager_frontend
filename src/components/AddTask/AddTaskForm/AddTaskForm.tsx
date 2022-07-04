@@ -56,6 +56,9 @@ export const AddTaskForm = ({ grandFather, isModifyTask }: Props) => {
           id="task-title"
           type="text"
           onChange={getTaskTitle}
+          required
+          minLength={3}
+          maxLength={25}
         />
       </label>
 
