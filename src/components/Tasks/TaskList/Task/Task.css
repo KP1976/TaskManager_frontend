@@ -25,3 +25,16 @@
   font-size: 0.75rem;
   font-weight: 400;
 }
+
+.fade {
+  animation: fade 0.8s ease-in-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0;
+  }
+}

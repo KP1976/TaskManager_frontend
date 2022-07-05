@@ -26,7 +26,7 @@ export const Task = (props: Props) => {
         <h3 className="Task__title">{title}</h3>
         <span className="Task__date">{formatedDate(createdAt)}</span>
       </div>
-      <Icons taskId={id} parent={parent} />
+      <Icons taskId={id} parent={parent} title={title} />
     </li>
   );
 };

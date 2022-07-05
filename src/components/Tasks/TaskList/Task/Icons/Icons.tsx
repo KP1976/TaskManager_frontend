@@ -1,19 +1,24 @@
-import { SyntheticEvent, useContext } from "react";
+import { MouseEvent, SyntheticEvent, useContext } from "react";
 import { AddTaskAndMobileMenuContext } from "../../../../../context/AddTaskAndMobileMenuContext";
+import { ModifyTaskContext } from "../../../../../context/ModifyTaskContext";
 
 import "./Icons.css";
 
 interface Props {
   taskId: string;
+  title: string;
   parent: (value: string) => void;
 }
 
-export const Icons = ({ parent, taskId }: Props) => {
+export const Icons = ({ parent, taskId, title }: Props) => {
   const { setAddTaskIsOpen, setIsModifyTask } = useContext(
     AddTaskAndMobileMenuContext
   );
+  const { setModifyTask } = useContext(ModifyTaskContext);
 
-  const makeTaskDone = () => {
+  const makeTaskDone = (e: MouseEvent<HTMLButtonElement>) => {
+    const task = e.currentTarget.parentElement?.parentElement;
+
     void (async () => {
       try {
         const response = await fetch(
@@ -27,8 +32,11 @@ export const Icons = ({ parent, taskId }: Props) => {
           }
         );
         await response.json();
+        task?.classList.add("fade");
 
-        location.reload();
+        setTimeout(() => {
+          location.reload();
+        }, 500);
       } catch (err) {
         console.log({ err });
       }
@@ -36,9 +44,9 @@ export const Icons = ({ parent, taskId }: Props) => {
   };
 
   const modifyTask = () => {
-    console.log("Modyfikacja zadania...", taskId);
     setAddTaskIsOpen(true);
     setIsModifyTask(true);
+    setModifyTask({ id: taskId, title });
   };
 
   const deleteTask = (e: SyntheticEvent<HTMLButtonElement>) => {
@@ -53,7 +61,7 @@ export const Icons = ({ parent, taskId }: Props) => {
 
   return (
     <div className="Task__icons">
-      <button onClick={makeTaskDone}>
+      <button onClick={(e) => makeTaskDone(e)}>
         <svg
           className="icon"
           width="12"

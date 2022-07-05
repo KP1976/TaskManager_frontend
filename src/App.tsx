@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AddTaskAndMobileMenuContext } from "./context/AddTaskAndMobileMenuContext";
 import { TasksContext } from "./context/TasksContext";
+import { ModifyTaskContext } from "./context/ModifyTaskContext";
 import { MenuView } from "./views/MenuView";
 import { TasksView } from "./views/TasksView";
 import { AddTaskView } from "./views/AddTaskView";
@@ -13,6 +14,7 @@ export const App = () => {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
   const [isModifyTask, setIsModifyTask] = useState(false);
   const [tasks, setTasks] = useState<SingleTask[]>([]);
+  const [modifyTask, setModifyTask] = useState({ id: "", title: "" });
 
   useEffect(() => {
     void (async () => {
@@ -24,23 +26,25 @@ export const App = () => {
   }, []);
 
   return (
-    <TasksContext.Provider value={{ tasks, setTasks }}>
-      <AddTaskAndMobileMenuContext.Provider
-        value={{
-          addTaskIsOpen,
-          setAddTaskIsOpen,
-          mobileMenuIsOpen,
-          setMobileMenuIsOpen,
-          isModifyTask,
-          setIsModifyTask,
-        }}
-      >
-        <div className="App">
-          <MenuView open={mobileMenuIsOpen} />
-          <TasksView />
-          <AddTaskView open={addTaskIsOpen} />
-        </div>
-      </AddTaskAndMobileMenuContext.Provider>
-    </TasksContext.Provider>
+    <ModifyTaskContext.Provider value={{ modifyTask, setModifyTask }}>
+      <TasksContext.Provider value={{ tasks, setTasks }}>
+        <AddTaskAndMobileMenuContext.Provider
+          value={{
+            addTaskIsOpen,
+            setAddTaskIsOpen,
+            mobileMenuIsOpen,
+            setMobileMenuIsOpen,
+            isModifyTask,
+            setIsModifyTask,
+          }}
+        >
+          <div className="App">
+            <MenuView open={mobileMenuIsOpen} />
+            <TasksView />
+            <AddTaskView open={addTaskIsOpen} />
+          </div>
+        </AddTaskAndMobileMenuContext.Provider>
+      </TasksContext.Provider>
+    </ModifyTaskContext.Provider>
   );
 };

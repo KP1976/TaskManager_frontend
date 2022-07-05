@@ -8,7 +8,7 @@ export const TasksContext = createContext({
       title: "",
       createdAt: new Date(),
       category: "",
-      isDone: 0,
+      isDone: 0 | 1,
     },
   ],
   setTasks: (tasks: SingleTask[]) => {},
