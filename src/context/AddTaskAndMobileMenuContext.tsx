@@ -9,4 +9,8 @@ export const AddTaskAndMobileMenuContext = createContext({
   setMobileMenuIsOpen: (open: boolean) => {
     console.log(open);
   },
+  isModifyTask: false,
+  setIsModifyTask: (isModify: boolean) => {
+    console.log(isModify);
+  },
 });

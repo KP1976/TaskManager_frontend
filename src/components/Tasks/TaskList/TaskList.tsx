@@ -3,7 +3,10 @@ import { TasksContext } from "../../../context/TasksContext";
 import { Task } from "./Task/Task";
 
 import "./TaskList.css";
-import "./Task/Task.css";
+
+interface Props {
+  grandGrandFather: (value: string) => void;
+}
 
 // const fakeTasks: TaskInterface[] = [
 //   {
@@ -36,15 +39,20 @@ import "./Task/Task.css";
 //   },
 // ];
 
-export const TaskList = () => {
-  const tasks = useContext(TasksContext);
-  console.log(tasks);
+export const TaskList = ({ grandGrandFather }: Props) => {
+  const { tasks } = useContext(TasksContext);
+
+  const grandFather = (value: string) => {
+    grandGrandFather(value);
+  };
 
   return (
     <ul className="TaskList">
-      {tasks.map((task) => (
-        <Task {...task} key={task.id} />
-      ))}
+      {tasks
+        .filter((task) => !task.isDone)
+        .map((task) => (
+          <Task {...task} key={task.id} grandFather={grandFather} />
+        ))}
     </ul>
   );
 };

@@ -1,50 +1,50 @@
 import { useEffect, useState } from "react";
 import { AddTaskAndMobileMenuContext } from "./context/AddTaskAndMobileMenuContext";
 import { TasksContext } from "./context/TasksContext";
+import { ModifyTaskContext } from "./context/ModifyTaskContext";
 import { MenuView } from "./views/MenuView";
 import { TasksView } from "./views/TasksView";
 import { AddTaskView } from "./views/AddTaskView";
+import { SingleTask } from "./interfaces/TaskInterface";
 
 import "./App.css";
-
-interface Task {
-  id: string;
-  title: string;
-  createdAt: string | Date;
-  category: string;
-  isDone: boolean;
-}
 
 export const App = () => {
   const [addTaskIsOpen, setAddTaskIsOpen] = useState(false);
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [isModifyTask, setIsModifyTask] = useState(false);
+  const [tasks, setTasks] = useState<SingleTask[]>([]);
+  const [modifyTask, setModifyTask] = useState({ id: "", title: "" });
 
   useEffect(() => {
     void (async () => {
       const response = await fetch("http://localhost:3001/api/tasks/");
-      const data = (await response.json()) as Task[];
+      const data = (await response.json()) as SingleTask[];
 
       setTasks(data);
     })();
   }, []);
 
   return (
-    <TasksContext.Provider value={tasks}>
-      <AddTaskAndMobileMenuContext.Provider
-        value={{
-          addTaskIsOpen,
-          setAddTaskIsOpen,
-          mobileMenuIsOpen,
-          setMobileMenuIsOpen,
-        }}
-      >
-        <div className="App">
-          <MenuView open={mobileMenuIsOpen} />
-          <TasksView />
-          <AddTaskView open={addTaskIsOpen} />
-        </div>
-      </AddTaskAndMobileMenuContext.Provider>
-    </TasksContext.Provider>
+    <ModifyTaskContext.Provider value={{ modifyTask, setModifyTask }}>
+      <TasksContext.Provider value={{ tasks, setTasks }}>
+        <AddTaskAndMobileMenuContext.Provider
+          value={{
+            addTaskIsOpen,
+            setAddTaskIsOpen,
+            mobileMenuIsOpen,
+            setMobileMenuIsOpen,
+            isModifyTask,
+            setIsModifyTask,
+          }}
+        >
+          <div className="App">
+            <MenuView open={mobileMenuIsOpen} />
+            <TasksView />
+            <AddTaskView open={addTaskIsOpen} />
+          </div>
+        </AddTaskAndMobileMenuContext.Provider>
+      </TasksContext.Provider>
+    </ModifyTaskContext.Provider>
   );
 };

@@ -4,8 +4,11 @@
   margin-left: auto;
 }
 
-.icon {
+.Task__icons button {
+  background: transparent;
+  border: none;
   margin-right: 0.5rem;
+  padding: 0;
 }
 
 .icon:last-child {
