@@ -38,3 +38,9 @@
     opacity: 0;
   }
 }
+
+@media (min-width: 414px) {
+  .Task {
+    padding: 1.5rem 0;
+  }
+}
