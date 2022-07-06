@@ -1,7 +1,14 @@
 .Title {
   line-height: 1;
-  margin: 2.125rem 0 0.5rem;
+  margin: 3rem 0 0.5rem;
   font-size: 1.875rem;
   font-weight: 300;
   width: 60%;
+}
+
+@media (min-width: 414px) {
+  .Title {
+    font-size: 2rem;
+    margin-top: 2.5rem;
+  }
 }
