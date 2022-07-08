@@ -7,6 +7,7 @@
   transform: translateX(-110%);
   transition: transform 0.3s ease-in;
   width: 73.3333%;
+  z-index: 1;
 }
 
 .MobileMenu__title {
@@ -20,4 +21,10 @@
 
 .show {
   transform: translateX(0);
+}
+
+@media (min-width: 414px) {
+  .MobileMenu__title {
+    margin: 4rem 0 2rem;
+  }
 }
