@@ -89,3 +89,11 @@
   content: "";
   position: absolute;
 }
+
+@media (min-width: 414px) {
+  .AddTaskFormCategory {
+    margin-bottom: 2rem;
+    padding-bottom: 0.875rem;
+  }
+}
+

@@ -3,3 +3,9 @@
   margin: 0 0 2rem 0;
   padding: 0;
 }
+
+@media (min-width: 414px) {
+  .AddTaskFormCategories {
+    margin: 0 0 4rem 0;
+  }
+}

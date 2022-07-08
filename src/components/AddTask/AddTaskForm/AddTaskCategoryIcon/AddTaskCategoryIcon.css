@@ -17,3 +17,11 @@
 .AddTaskCategoryIcon .fa-user-tie {
   width: 1.25rem;
 }
+
+@media (min-width: 414px) {
+  .AddTaskCategoryIcon {
+    height: 3.375rem;
+    margin: 3rem auto 0;
+    width: 3.375rem;
+  }
+}
