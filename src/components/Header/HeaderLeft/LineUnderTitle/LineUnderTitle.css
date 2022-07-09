@@ -18,3 +18,10 @@
     width: 10.5rem;
   }
 }
+
+@media (min-width: 600px) {
+  .container {
+    padding-bottom: 3.25rem;
+    width: 16rem;
+  }
+}

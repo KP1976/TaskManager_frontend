@@ -12,3 +12,10 @@
     margin-top: 2.5rem;
   }
 }
+
+@media (min-width: 600px) {
+  .Title {
+    font-size: 3rem;
+    margin-top: 3rem;
+  }
+}

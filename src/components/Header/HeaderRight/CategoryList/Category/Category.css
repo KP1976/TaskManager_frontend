@@ -22,7 +22,7 @@
 .Category__name {
   color: white;
   font-size: 0.75rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1;
   text-transform: capitalize;
 }
@@ -30,5 +30,23 @@
 @media (min-width: 414px) {
   .Category {
     padding: 0.75rem 0 0.75rem 0.8125rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .Category {
+    padding: 0.875rem 0 0.875rem 2.25rem;
+    width: 12.5rem;
+  }
+
+  .Category__number {
+    font-size: 1.25rem;
+    margin-right: 0.875rem;
+    text-align: right;
+    width: 1.25rem;
+  }
+
+  .Category__name {
+    font-size: 1rem;
   }
 }
