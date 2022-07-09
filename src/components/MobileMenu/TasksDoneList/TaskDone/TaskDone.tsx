@@ -17,8 +17,6 @@ export const TaskDone = (props: Props) => {
       <span className="TaskDone__date">{formatedDate(createdAt)}</span>
       <svg
         className="TaskDone__icon"
-        width="32"
-        height="31"
         viewBox="0 0 32 31"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
