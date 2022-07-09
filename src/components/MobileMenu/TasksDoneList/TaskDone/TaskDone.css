@@ -50,8 +50,30 @@
 
   .TaskDone__icon {
     bottom: -1.5rem;
-    position: absolute;
     right: 1rem;
     width: 2.875rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .TaskDone {
+    height: 6.25rem;
+    margin-bottom: 2rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .TaskDone__title {
+    font-size: 1.75rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .TaskDone__date {
+    font-size: 1.5rem;
+  }
+
+  .TaskDone__icon {
+    bottom: -2.25rem;
+    right: 1rem;
+    width: 5.125rem;
   }
 }
