@@ -11,6 +11,21 @@
   padding: 0;
 }
 
+.Task__icons button svg {
+  width: 0.75rem;
+}
+
 .icon:last-child {
   margin-right: 0;
+}
+
+@media (min-width: 600px) {
+  .Task__icons button {
+    margin-right: 0.75rem;
+    padding: 0;
+  }
+
+  .Task__icons button svg {
+    width: 1.125rem;
+  }
 }

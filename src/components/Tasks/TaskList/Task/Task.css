@@ -23,7 +23,7 @@
 .Task__date {
   color: var(--third-color);
   font-size: 0.75rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .fade {
@@ -42,5 +42,24 @@
 @media (min-width: 414px) {
   .Task {
     padding: 1.5rem 0;
+  }
+}
+
+@media (min-width: 600px) {
+  .Task {
+    border-bottom: 2px solid var(--third-color);
+  }
+
+  .Task__title {
+    font-size: 1.125rem;
+    margin: 0.25rem 0 0.75rem;
+  }
+
+  .Task__texts {
+    justify-content: start;
+  }
+
+  .Task__date {
+    font-size: 1rem;
   }
 }

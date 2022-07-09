@@ -17,3 +17,24 @@
 .CategoryIcon .fa-user-tie {
   width: 1rem;
 }
+
+@media (min-width: 600px) {
+  .CategoryIcon {
+    height: 3.5rem;
+    margin-right: 2rem;
+    width: 3.5rem;
+  }
+
+  .CategoryIcon .fa-laptop-code {
+    width: 1.75rem;
+  }
+
+  .CategoryIcon .fa-running,
+  .CategoryIcon .fa-pizza-slice {
+    width: 1.625rem;
+  }
+
+  .CategoryIcon .fa-user-tie {
+    width: 1.5rem;
+  }
+}

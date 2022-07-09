@@ -64,8 +64,6 @@ export const Icons = ({ parent, taskId, title }: Props) => {
       <button onClick={(e) => makeTaskDone(e)}>
         <svg
           className="icon"
-          width="12"
-          height="12"
           viewBox="0 0 12 12"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -78,8 +76,6 @@ export const Icons = ({ parent, taskId, title }: Props) => {
       <button onClick={modifyTask}>
         <svg
           className="icon"
-          width="12"
-          height="12"
           viewBox="0 0 12 12"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -107,8 +103,6 @@ export const Icons = ({ parent, taskId, title }: Props) => {
       <button onClick={deleteTask}>
         <svg
           className="icon"
-          width="12"
-          height="12"
           viewBox="0 0 12 12"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
