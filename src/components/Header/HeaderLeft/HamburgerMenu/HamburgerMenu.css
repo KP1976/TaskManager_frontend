@@ -92,3 +92,41 @@
     width: 0;
   }
 }
+
+@media (min-width: 900px) {
+  .HamburgerMenu {
+    height: 1.25rem;
+  }
+
+  .HamburgerMenu__top,
+  .HamburgerMenu__middle,
+  .HamburgerMenu__bottom {
+    border-radius: 2px;
+    height: 0.25rem;
+  }
+
+  .HamburgerMenu__middle {
+    top: 0.5rem;
+    width: 2rem;
+  }
+
+  .HamburgerMenu__bottom {
+    top: 1rem;
+    right: -0.5rem;
+  }
+
+  .turn-right {
+    transform: rotate(45deg);
+    width: 2rem;
+  }
+
+  .turn-left {
+    top: 1.35rem;
+    transform: rotate(-45deg);
+    width: 2rem;
+  }
+
+  .vanished {
+    width: 0;
+  }
+}

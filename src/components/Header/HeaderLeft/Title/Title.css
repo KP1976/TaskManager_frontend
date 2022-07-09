@@ -19,3 +19,10 @@
     margin-top: 3rem;
   }
 }
+
+@media (min-width: 900px) {
+  .Title {
+    font-size: 4.5rem;
+    margin-top: 4.75rem;
+  }
+}

@@ -1,6 +1,6 @@
-import "./Date.css";
+import "./ActualDate.css";
 import { formatedDate } from "../../../../utils/formatedDate";
 
 export const ActualDate = () => (
-  <span className="Date">{formatedDate(new Date())}</span>
+  <span className="ActualDate">{formatedDate(new Date())}</span>
 );

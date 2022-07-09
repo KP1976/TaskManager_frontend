@@ -10,3 +10,9 @@
     padding: 1.5em 0 1.5em 1.5em;
   }
 }
+
+@media (min-width: 900px) {
+  .Header {
+    padding: 2em 4rem 2.5em 4em;
+  }
+}

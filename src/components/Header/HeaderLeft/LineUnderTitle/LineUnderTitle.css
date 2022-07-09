@@ -25,3 +25,10 @@
     width: 16rem;
   }
 }
+
+@media (min-width: 900px) {
+  .container {
+    padding-bottom: 5rem;
+    width: 23rem;
+  }
+}
