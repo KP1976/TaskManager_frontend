@@ -116,14 +116,40 @@
   .AddTaskFormCategory__checkmark {
     border: 2px solid white;
     height: 1rem;
-    right: 0;
-    top: 0;
     width: 1rem;
   }
 
   .AddTaskFormCategory__radio-container .AddTaskFormCategory__checkmark:after {
-    width: 8px;
-    height: 8px;
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .AddTaskFormCategory {
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .AddTaskFormCategory__name {
+    font-size: 1.75rem;
+  }
+
+  .AddTaskFormCategory__dot {
+    height: 0.75rem;
+    width: 0.75rem;
+  }
+
+  .AddTaskFormCategory__checkmark {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .AddTaskFormCategory__radio-container .AddTaskFormCategory__checkmark:after {
+    width: 0.75rem;
+    height: 0.75rem;
+    right: 0.25rem;
+    top: 0.25rem;
   }
 }
 

@@ -50,3 +50,22 @@
     font-size: 1.5rem;
   }
 }
+
+@media (min-width: 900px) {
+  .AddTask {
+    padding: 4rem 9.375rem 0;
+  }
+
+  .AddTask__back-icon {
+    top: 2rem;
+    left: 2rem;
+  }
+
+  .AddTask__back-icon svg {
+    height: 2rem;
+  }
+
+  .AddTask__title {
+    font-size: 2.375rem;
+  }
+}

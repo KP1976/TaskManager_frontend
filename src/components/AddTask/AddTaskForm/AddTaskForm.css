@@ -71,3 +71,28 @@
     margin-top: 3.5rem;
   }
 }
+
+@media (min-width: 900px) {
+  .AddTaskForm {
+    margin-top: 5rem;
+  }
+
+  .AddTaskForm__label {
+    font-size: 1.75rem;
+  }
+
+  .AddTaskForm__title-input {
+    border-radius: 5px;
+    height: 4rem;
+    font-size: 1.125rem;
+    margin-top: 1.125rem;
+    padding: 0 1.5rem;
+  }
+
+  .AddTaskForm__submit-button {
+    border-radius: 10px;
+    font-size: 2rem;
+    height: 8rem;
+    margin-top: 4.875rem;
+  }
+}

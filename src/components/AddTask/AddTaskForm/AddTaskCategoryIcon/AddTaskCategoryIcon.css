@@ -43,3 +43,22 @@
     width: 2rem;
   }
 }
+
+@media (min-width: 900px) {
+  .AddTaskCategoryIcon {
+    border: 2px solid var(--third-color);
+    height: 7.5rem;
+    margin: 6rem auto 0;
+    width: 7.5rem;
+  }
+
+  .AddTaskCategoryIcon .fa-laptop-code {
+    width: 3.75rem;
+  }
+
+  .AddTaskCategoryIcon .fa-running,
+  .AddTaskCategoryIcon .fa-pizza-slice,
+  .AddTaskCategoryIcon .fa-user-tie {
+    width: 3.25rem;
+  }
+}
