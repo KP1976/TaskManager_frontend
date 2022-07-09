@@ -21,3 +21,10 @@
     max-height: 48vh;
   }
 }
+
+@media (min-width: 900px) {
+  .TaskList {
+    margin: 2.5rem 0 3.25rem 0;
+    max-height: 48vh;
+  }
+}

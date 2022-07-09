@@ -38,3 +38,21 @@
     width: 1.5rem;
   }
 }
+
+@media (min-width: 900px) {
+  .CategoryIcon {
+    height: 5rem;
+    margin-right: 6.25rem;
+    width: 5rem;
+  }
+
+  .CategoryIcon .fa-laptop-code {
+    width: 2.5rem;
+  }
+
+  .CategoryIcon .fa-running,
+  .CategoryIcon .fa-pizza-slice,
+  .CategoryIcon .fa-user-tie {
+    width: 2.25rem;
+  }
+}

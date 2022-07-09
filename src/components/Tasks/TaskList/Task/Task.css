@@ -63,3 +63,23 @@
     font-size: 1rem;
   }
 }
+
+@media (min-width: 900px) {
+  .Task {
+    padding: 2.5rem 0 1.75rem 0;
+  }
+
+  .Task__title {
+    font-size: 1.75rem;
+    margin: 0.25rem 0 1rem;
+  }
+
+  .Task__texts {
+    justify-content: start;
+  }
+
+  .Task__date {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}

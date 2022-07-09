@@ -81,3 +81,31 @@
     width: 4rem;
   }
 }
+
+@media (min-width: 900px) {
+  .Tasks {
+    padding: 3rem 4rem 0;
+  }
+
+  .Tasks__title {
+    font-size: 1.75rem;
+  }
+
+  .Tasks__quantity-done-tasks {
+    height: 3rem;
+    margin-left: 1.5rem;
+    width: 3rem;
+  }
+
+  .Tasks__quantity-done-tasks span {
+    font-size: 1.5rem;
+  }
+
+  .Tasks__add-task-button {
+    bottom: 4rem;
+    font-size: 4.5rem;
+    height: 6rem;
+    right: 4rem;
+    width: 6rem;
+  }
+}
