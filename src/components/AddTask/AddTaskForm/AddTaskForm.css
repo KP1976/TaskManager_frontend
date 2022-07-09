@@ -4,7 +4,7 @@
 
 .AddTaskForm__label {
   display: block;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 0.875rem;
   line-height: 1;
 }
@@ -45,5 +45,29 @@
 @media (min-width: 414px) {
   .AddTaskForm {
     margin-top: 4.5rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .AddTaskForm {
+    margin-top: 4rem;
+  }
+
+  .AddTaskForm__label {
+    font-size: 1.125rem;
+  }
+
+  .AddTaskForm__title-input {
+    height: 3rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding: 0 1rem;
+  }
+
+  .AddTaskForm__submit-button {
+    border-radius: 6px;
+    font-size: 1.5rem;
+    height: 6rem;
+    margin-top: 3.5rem;
   }
 }

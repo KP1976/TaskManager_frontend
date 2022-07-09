@@ -11,7 +11,7 @@
 }
 
 .AddTaskFormCategory__name {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 0.875rem;
   line-height: 1;
   text-transform: capitalize;
@@ -94,6 +94,36 @@
   .AddTaskFormCategory {
     margin-bottom: 2rem;
     padding-bottom: 0.875rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .AddTaskFormCategory {
+    border-bottom: 2px solid var(--third-color);
+    padding-bottom: 1.125rem;
+  }
+
+  .AddTaskFormCategory__name {
+    font-size: 1.125rem;
+  }
+
+  .AddTaskFormCategory__dot {
+    height: 0.5rem;
+    margin-left: 1rem;
+    width: 0.5rem;
+  }
+
+  .AddTaskFormCategory__checkmark {
+    border: 2px solid white;
+    height: 1rem;
+    right: 0;
+    top: 0;
+    width: 1rem;
+  }
+
+  .AddTaskFormCategory__radio-container .AddTaskFormCategory__checkmark:after {
+    width: 8px;
+    height: 8px;
   }
 }
 

@@ -20,6 +20,10 @@
   position: fixed;
 }
 
+.AddTask__back-icon svg {
+  height: 1rem;
+}
+
 .AddTask__title {
   font-weight: 700;
   font-size: 1rem;
@@ -27,4 +31,22 @@
   margin: 0;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (min-width: 600px) {
+  .AddTask {
+    padding: 1.5rem 3rem 0;
+  }
+
+  .AddTask__back-icon {
+    left: 1.25rem;
+  }
+
+  .AddTask__back-icon svg {
+    height: 1.5rem;
+  }
+
+  .AddTask__title {
+    font-size: 1.5rem;
+  }
 }
