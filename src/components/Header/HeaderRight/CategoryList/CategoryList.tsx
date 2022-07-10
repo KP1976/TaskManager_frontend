@@ -29,23 +29,38 @@ export const CategoryList = () => {
     }
   });
 
+  const sumOfAllCategories =
+    sumOfEachTaskCategory.recreation +
+    sumOfEachTaskCategory.technology +
+    sumOfEachTaskCategory.personal +
+    sumOfEachTaskCategory.food;
+
   return (
     <ul className="CategoryList">
       <Category
+        categoryNumber={sumOfAllCategories}
+        categoryName={"wszystkie"}
+        categoryColor=""
+      />
+      <Category
         categoryNumber={sumOfEachTaskCategory.recreation}
         categoryName={"rekreacja"}
+        categoryColor="orange"
       />
       <Category
         categoryNumber={sumOfEachTaskCategory.technology}
         categoryName={"technologia"}
+        categoryColor="yellow"
       />
       <Category
         categoryNumber={sumOfEachTaskCategory.personal}
         categoryName={"osobiste"}
+        categoryColor="red"
       />
       <Category
         categoryNumber={sumOfEachTaskCategory.food}
         categoryName={"jedzenie"}
+        categoryColor="green"
       />
     </ul>
   );

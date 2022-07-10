@@ -16,3 +16,13 @@
     padding: 2em 4rem 2.5em 4em;
   }
 }
+
+@media (min-width: 1200px) {
+  .Header {
+    background: linear-gradient(180deg, #0F2538 11.39%, rgba(15, 37, 56, 0) 100%);
+    flex-direction: column-reverse;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    padding: 0;
+  }
+}

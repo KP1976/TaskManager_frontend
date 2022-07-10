@@ -5,6 +5,7 @@ import { ModifyTaskContext } from "./context/ModifyTaskContext";
 import { MenuView } from "./views/MenuView";
 import { TasksView } from "./views/TasksView";
 import { AddTaskView } from "./views/AddTaskView";
+import { DesktopView } from "./views/DesktopView";
 import { SingleTask } from "./interfaces/TaskInterface";
 
 import "./App.css";
@@ -39,9 +40,13 @@ export const App = () => {
           }}
         >
           <div className="App">
+            <h1 className="desktop-main-title">
+              Aplikacja do&nbsp;zarządzania&nbsp;zadaniami
+            </h1>
             <MenuView open={mobileMenuIsOpen} />
             <TasksView />
             <AddTaskView open={addTaskIsOpen} />
+            <DesktopView />
           </div>
         </AddTaskAndMobileMenuContext.Provider>
       </TasksContext.Provider>

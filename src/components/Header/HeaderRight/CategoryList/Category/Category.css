@@ -72,3 +72,44 @@
     font-size: 1.5rem;
   }
 }
+
+@media (min-width: 1200px) {
+  .Category {
+    background-color: transparent;
+    border-radius: 0;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    padding: 0;
+    width: 100%;
+  }
+
+  .Category .AddTaskFormCategory__dot {
+    height: 0.625rem;
+    margin-left: 0;
+    width: 0.625rem;
+  }
+
+  .Category__number {
+    background-color: var(--gray-color);
+    border-radius: 9px;
+    color: black;
+    font-size: 0.75rem;
+    height: 1rem;
+    line-height: 1rem;
+    margin-left: auto;
+    margin-right: 0;
+    text-align: center;
+    width: 2.5rem;
+  }
+
+  .Category__name {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+  }
+
+  .Category:first-child .Category__name {
+    color: var(--third-color);
+    font-weight: 400;
+  }
+}

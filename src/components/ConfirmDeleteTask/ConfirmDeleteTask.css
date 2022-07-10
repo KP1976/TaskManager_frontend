@@ -64,3 +64,21 @@ svg path {
     width: 6.125rem;
   }
 }
+
+@media (min-width: 900px) {
+  .ConfirmDeleteTask {
+    padding: 2rem;
+    width: 60%;
+  }
+
+  .ConfirmDeleteTask__question {
+    font-size: 2.25rem;
+    margin: 0 auto 3.625rem;
+  }
+
+  .ConfirmDeleteTask__button {
+    font-size: 1.875rem;
+    height: 3.25rem;
+    width: 10.25rem;
+  }
+}

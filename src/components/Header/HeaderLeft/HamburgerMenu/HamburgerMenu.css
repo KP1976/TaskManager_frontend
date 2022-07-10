@@ -130,3 +130,9 @@
     width: 0;
   }
 }
+
+@media (min-width: 1200px) {
+  .HamburgerMenu {
+    display: none;
+  }
+}

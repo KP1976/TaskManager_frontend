@@ -32,3 +32,9 @@
     width: 23rem;
   }
 }
+
+@media (min-width: 1200px) {
+  .container {
+    display: none;
+  }
+}

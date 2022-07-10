@@ -7,3 +7,37 @@
   min-height: 100vh;
 }
 
+.desktop-main-title {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .App {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 17rem 26.25rem 26.25rem;
+    grid-template-rows: auto auto auto auto;
+    grid-column-gap: 2.5rem;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 75rem;
+  }
+
+  .desktop-main-title {
+    display: block;
+    font-size: 2.625rem;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    line-height: 1.2;
+    margin: 3.75rem auto;
+    max-width: 30rem;
+    text-align: center;
+  }
+}
+
+/*@media (min-width: 1440px) {*/
+/*  .App {*/
+/*    max-width: 1440px;*/
+/*  }*/
+/*}*/
+
