@@ -4,6 +4,7 @@ import { AddTaskAndMobileMenuContext } from "../../context/AddTaskAndMobileMenuC
 import { TasksContext } from "../../context/TasksContext";
 
 import "./Tasks.css";
+import { AddTaskButton } from "./AddTaskButton/AddTaskButton";
 
 interface Props {
   grandGrandGrandFather: (value: string) => void;
@@ -33,9 +34,7 @@ export const Tasks = ({ grandGrandGrandFather }: Props) => {
       <div className="Tasks__quantity-done-tasks">
         <span>{sumOfTasksDone}</span>
       </div>
-      <button className="Tasks__add-task-button" onClick={showAddTask}>
-        +
-      </button>
+      <AddTaskButton showAddTask={showAddTask} />
     </main>
   );
 };

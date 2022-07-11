@@ -85,7 +85,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .TaskDone {
     background-color: transparent;
     border: 1px solid var(--primary-color);

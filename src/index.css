@@ -27,7 +27,7 @@ body {
   overflow: hidden;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   body {
     background: linear-gradient(180deg, #000000 0%, #0F2538 100%)
   }

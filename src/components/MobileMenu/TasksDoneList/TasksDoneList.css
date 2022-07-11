@@ -5,7 +5,7 @@
   padding: 0;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .TasksDoneList {
     height: auto;
   }
