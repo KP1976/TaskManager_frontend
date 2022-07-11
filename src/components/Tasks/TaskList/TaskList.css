@@ -28,3 +28,15 @@
     max-height: 48vh;
   }
 }
+
+@media (min-width: 1280px) {
+  .TaskList {
+    margin: 2rem 0;
+    max-height: 32vh;
+  }
+
+  .TaskList::-webkit-scrollbar {
+    width: 0;
+    background: transparent; /* make scrollbar transparent */
+  }
+}

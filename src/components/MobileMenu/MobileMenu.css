@@ -60,6 +60,7 @@
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     height: 21.5rem;
+    margin-top: -1rem;
     padding: 2rem;
     position: static;
     transform: translateX(0);

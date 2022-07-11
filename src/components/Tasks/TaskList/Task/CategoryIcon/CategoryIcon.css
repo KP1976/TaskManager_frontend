@@ -56,3 +56,27 @@
     width: 2.25rem;
   }
 }
+
+@media (min-width: 1280px) {
+  .CategoryIcon {
+    background-color: white;
+    border: none;
+    height: 2rem;
+    margin-right: 0.875rem;
+    width: 2rem;
+  }
+
+  .CategoryIcon svg path {
+    fill: var(--third-color);
+  }
+
+  .CategoryIcon .fa-laptop-code {
+    width: 0.875rem;
+  }
+
+  .CategoryIcon .fa-running,
+  .CategoryIcon .fa-pizza-slice,
+  .CategoryIcon .fa-user-tie {
+    width: 0.75rem;
+  }
+}

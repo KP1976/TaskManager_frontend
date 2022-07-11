@@ -76,3 +76,29 @@
     font-size: 1.5rem;
   }
 }
+
+@media (min-width: 1280px) {
+  .Tasks {
+    background-color: var(--primary-color);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 1.625rem 2rem 0;
+  }
+
+  .Tasks__title {
+    color: var(--gray-color);
+    font-size: 1.25rem;
+  }
+
+  .Tasks .Tasks__title:nth-child(3) {
+    display: none;
+  }
+
+  .Tasks__title::after {
+    content: " do zrobienia"
+  }
+
+  .Tasks__quantity-done-tasks {
+    display: none;
+  }
+}

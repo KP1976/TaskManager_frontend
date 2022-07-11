@@ -38,3 +38,21 @@
     width: 1.75rem;
   }
 }
+
+@media (min-width: 1280px) {
+  .Task__icons button:nth-child(2) {
+    display: none;
+  }
+
+  .Task__icons button:last-child {
+    margin-right: 0;
+  }
+
+  .Task__icons button {
+    margin-right: 0.5rem;
+  }
+
+  .Task__icons button svg {
+    width: 0.875rem;
+  }
+}
