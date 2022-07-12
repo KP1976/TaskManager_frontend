@@ -55,12 +55,13 @@
 }
 
 .AddTaskFormCategory__radio-container .AddTaskFormCategory__checkmark:after {
-  top: 2px;
-  right: 2px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
   background: var(--third-color);
+  border-radius: 50%;
+  height: 6px;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 6px;
 }
 
 .AddTaskFormCategory__radio-container:hover ~ .AddTaskFormCategory__checkmark {
@@ -148,8 +149,6 @@
   .AddTaskFormCategory__radio-container .AddTaskFormCategory__checkmark:after {
     width: 0.75rem;
     height: 0.75rem;
-    right: 0.25rem;
-    top: 0.25rem;
   }
 }
 
@@ -190,8 +189,6 @@
   .AddTaskFormCategory__radio-container .AddTaskFormCategory__checkmark:after {
     width: 0.5rem;
     height: 0.5rem;
-    right: 0.2rem;
-    top: 0.2rem;
   }
 }
 

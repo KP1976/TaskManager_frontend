@@ -133,9 +133,25 @@
 
   .AddTaskForm__submit-button {
     border-radius: 8px;
+    cursor: pointer;
     font-size: 1.125rem;
     height: 3.5rem;
     margin-top: 0;
     order: 3;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .AddTaskForm__submit-button:hover {
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+  }
+
+  .AddTaskForm__submit-button::after {
+    content: "ZATWIERDŹ";
+    font-weight: bold;
+  }
+
+  .AddTaskForm__submit-button span {
+    display: none;
   }
 }

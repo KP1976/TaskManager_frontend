@@ -1,8 +1,10 @@
 import { CategoryIcon } from "./CategoryIcon/CategoryIcon";
 import { Icons } from "./Icons/Icons";
 import { formatedDate } from "../../../../utils/formatedDate";
+import { AddTaskAndMobileMenuContext } from "../../../../context/AddTaskAndMobileMenuContext";
 
 import "./Task.css";
+import { useContext } from "react";
 
 interface Props {
   id: string;
@@ -14,6 +16,7 @@ interface Props {
 
 export const Task = (props: Props) => {
   const { id, category, title, createdAt, grandFather } = props;
+  const { setAddTaskIsOpen } = useContext(AddTaskAndMobileMenuContext);
 
   const parent = (value: string) => {
     grandFather(value);
@@ -21,6 +24,7 @@ export const Task = (props: Props) => {
 
   const handleClick = () => {
     console.log(`kliknąłęś taska o identyfikatorze: ${id}`);
+    setAddTaskIsOpen(false);
   };
 
   return (

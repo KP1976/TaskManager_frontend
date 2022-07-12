@@ -92,7 +92,11 @@ export const AddTaskForm = ({ isModifyTask }: Props) => {
       </label>
 
       <button type="submit" className="AddTaskForm__submit-button">
-        {isModifyTask ? "modyfikuj zadanie" : "dodaj zadanie"}
+        {isModifyTask ? (
+          <span>modyfikuj zadanie</span>
+        ) : (
+          <span>dodaj zadanie</span>
+        )}
       </button>
     </form>
   );
