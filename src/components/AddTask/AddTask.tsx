@@ -1,6 +1,5 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { AddTaskForm } from "./AddTaskForm/AddTaskForm";
-import { AddTaskCategoryIcon } from "./AddTaskForm/AddTaskCategoryIcon/AddTaskCategoryIcon";
 import { AddTaskAndMobileMenuContext } from "../../context/AddTaskAndMobileMenuContext";
 
 import "./AddTask.css";
@@ -13,11 +12,6 @@ export const AddTask = ({ isOpen }: Props) => {
   const { setAddTaskIsOpen, isModifyTask, setIsModifyTask } = useContext(
     AddTaskAndMobileMenuContext
   );
-  const [categoryFinal, setCategoryFinal] = useState("rekreacja");
-
-  const grandFather = (value: string) => {
-    setCategoryFinal(value);
-  };
 
   const handleClick = () => {
     setAddTaskIsOpen(false);
@@ -44,8 +38,8 @@ export const AddTask = ({ isOpen }: Props) => {
       <h2 className="AddTask__title">
         {isModifyTask ? "modyfikuj zadanie" : "dodaj nowe zadanie"}
       </h2>
-      <AddTaskCategoryIcon category={categoryFinal} />
-      <AddTaskForm grandFather={grandFather} isModifyTask={isModifyTask} />
+      <h2 className="AddTask__title-desktop">nowe zadanie</h2>
+      <AddTaskForm isModifyTask={isModifyTask} />
     </div>
   );
 };

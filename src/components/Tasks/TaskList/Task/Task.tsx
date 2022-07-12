@@ -19,8 +19,12 @@ export const Task = (props: Props) => {
     grandFather(value);
   };
 
+  const handleClick = () => {
+    console.log(`kliknąłęś taska o identyfikatorze: ${id}`);
+  };
+
   return (
-    <li className="Task" data-task-id={id}>
+    <li className="Task" data-task-id={id} onClick={handleClick}>
       <CategoryIcon category={category} color={"white"} />
       <div className="Task__texts">
         <h3 className="Task__title">{title}</h3>

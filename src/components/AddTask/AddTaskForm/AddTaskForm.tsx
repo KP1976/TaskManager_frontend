@@ -1,22 +1,21 @@
-import { ChangeEvent, useContext, useState } from "react";
+import React, { ChangeEvent, useContext, useState } from "react";
 import { AddTaskFormCategories } from "./AddTaskFormCategories/AddTaskFormCategories";
 import { SingleTask } from "../../../interfaces/TaskInterface";
 import { ModifyTaskContext } from "../../../context/ModifyTaskContext";
 
 import "./AddTaskForm.css";
+import { AddTaskCategoryIcon } from "./AddTaskCategoryIcon/AddTaskCategoryIcon";
 
 interface Props {
-  grandFather: (value: string) => void;
   isModifyTask: boolean;
 }
 
-export const AddTaskForm = ({ isModifyTask, grandFather }: Props) => {
+export const AddTaskForm = ({ isModifyTask }: Props) => {
   const { modifyTask } = useContext(ModifyTaskContext);
   const [taskTitle, setTaskTitle] = useState("");
   const [taskCategory, setTaskCategory] = useState("rekreacja");
 
   const parent = (value: string) => {
-    grandFather(value);
     setTaskCategory(value);
   };
 
@@ -75,6 +74,8 @@ export const AddTaskForm = ({ isModifyTask, grandFather }: Props) => {
       className="AddTaskForm"
       onSubmit={!isModifyTask ? addTask : () => handleModifyTask(modifyTask.id)}
     >
+      <AddTaskCategoryIcon category={taskCategory} />
+      <p className="AddTaskForm__categories-title">Typ zadania</p>
       <AddTaskFormCategories parent={parent} />
 
       <label className="AddTaskForm__label" htmlFor="task-title">

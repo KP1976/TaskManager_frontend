@@ -153,3 +153,45 @@
   }
 }
 
+@media (min-width: 1280px) {
+  .AddTaskFormCategory {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0.875rem;
+  }
+
+  .AddTaskFormCategory__name {
+    font-size: 1rem;
+    order: 1;
+  }
+
+  .AddTaskFormCategory__dot {
+    height: 0.625rem;
+    margin-left: 0;
+    margin-right: 0.5rem;
+    order: 0;
+    width: 0.625rem;
+  }
+
+  .AddTaskFormCategory__checkmark {
+    border: 2px solid var(--third-color);
+    height: 1.125rem;
+    order: 2;
+    top: -3px;
+    right: -110px;
+    width: 1.125rem;
+  }
+
+  .AddTaskFormCategory__radio-container {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .AddTaskFormCategory__radio-container .AddTaskFormCategory__checkmark:after {
+    width: 0.5rem;
+    height: 0.5rem;
+    right: 0.2rem;
+    top: 0.2rem;
+  }
+}
+

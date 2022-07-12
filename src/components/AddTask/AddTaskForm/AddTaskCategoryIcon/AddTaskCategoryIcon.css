@@ -4,7 +4,7 @@
   display: flex;
   place-content: center;
   height: 3rem;
-  margin: 2.5rem auto 0;
+  margin: 0 auto 4rem;
   width: 3rem;
 }
 
@@ -60,5 +60,24 @@
   .AddTaskCategoryIcon .fa-pizza-slice,
   .AddTaskCategoryIcon .fa-user-tie {
     width: 3.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .AddTaskCategoryIcon {
+    height: 4rem;
+    order: 1;
+    margin: 2.5rem auto;
+    width: 4rem;
+  }
+
+  .AddTaskCategoryIcon .fa-laptop-code {
+    width: 1.75rem;
+  }
+
+  .AddTaskCategoryIcon .fa-running,
+  .AddTaskCategoryIcon .fa-pizza-slice,
+  .AddTaskCategoryIcon .fa-user-tie {
+    width: 1.5rem;
   }
 }

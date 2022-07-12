@@ -1,5 +1,9 @@
 .AddTaskForm {
-  margin-top: 4rem;
+  margin-top: 2.5rem;
+}
+
+.AddTaskForm__categories-title {
+  display: none;
 }
 
 .AddTaskForm__label {
@@ -94,5 +98,44 @@
     font-size: 2rem;
     height: 8rem;
     margin-top: 4.875rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .AddTaskForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.875rem;
+  }
+
+  .AddTaskForm__categories-title {
+    color: var(--third-color);
+    display: block;
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0 0 1.5rem 0;
+    order: 2;
+  }
+
+  .AddTaskForm__label {
+    color: var(--third-color);
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: 1;
+    order: 0;
+  }
+
+  .AddTaskForm__title-input {
+    height: 3.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .AddTaskForm__submit-button {
+    border-radius: 8px;
+    font-size: 1.125rem;
+    height: 3.5rem;
+    margin-top: 0;
+    order: 3;
   }
 }
