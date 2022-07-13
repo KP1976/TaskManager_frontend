@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { AddTaskAndMobileMenuContext } from "./context/AddTaskAndMobileMenuContext";
 import { TasksContext } from "./context/TasksContext";
 import { ModifyTaskContext } from "./context/ModifyTaskContext";
+import { TaskDetailsContext } from "./context/TaskDetailsContext";
 import { MenuView } from "./views/MenuView";
 import { TasksView } from "./views/TasksView";
 import { AddTaskView } from "./views/AddTaskView";
@@ -15,6 +16,12 @@ export const App = () => {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
   const [isModifyTask, setIsModifyTask] = useState(false);
   const [tasks, setTasks] = useState<SingleTask[]>([]);
+  const [taskDetails, setTaskDetails] = useState({
+    id: "",
+    title: "",
+    category: "",
+    createdAt: new Date(),
+  });
   const [modifyTask, setModifyTask] = useState({ id: "", title: "" });
 
   useEffect(() => {
@@ -23,6 +30,7 @@ export const App = () => {
       const data = (await response.json()) as SingleTask[];
 
       setTasks(data);
+      setTaskDetails(data[0]);
     })();
   }, []);
 
@@ -44,9 +52,14 @@ export const App = () => {
               Aplikacja do&nbsp;zarządzania&nbsp;zadaniami
             </h1>
             <MenuView open={mobileMenuIsOpen} />
-            <TasksView />
-            <AddTaskView open={addTaskIsOpen} />
-            <DesktopView />
+            <TaskDetailsContext.Provider
+              value={{ taskDetails, setTaskDetails }}
+            >
+              <TasksView />
+              <AddTaskView open={addTaskIsOpen} />
+
+              <DesktopView />
+            </TaskDetailsContext.Provider>
           </div>
         </AddTaskAndMobileMenuContext.Provider>
       </TasksContext.Provider>
