@@ -30,10 +30,12 @@ export const Task = (props: Props) => {
   };
 
   return (
-    <li className="Task" data-task-id={id} onClick={handleClick}>
+    <li className="Task" data-task-id={id}>
       <CategoryIcon category={category} color={"white"} />
       <div className="Task__texts">
-        <h3 className="Task__title">{title}</h3>
+        <h3 className="Task__title" onClick={handleClick}>
+          {title}
+        </h3>
         <span className="Task__date">{formatedDate(createdAt)}</span>
       </div>
       <Icons taskId={id} parent={parent} title={title} />

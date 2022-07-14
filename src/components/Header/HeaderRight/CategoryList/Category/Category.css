@@ -27,6 +27,14 @@
   text-transform: capitalize;
 }
 
+.Category:first-child {
+  display: none;
+}
+
+.Category .AddTaskFormCategory__dot {
+  display: none;
+}
+
 @media (min-width: 414px) {
   .Category {
     padding: 0.75rem 0 0.75rem 0.8125rem;
@@ -59,7 +67,7 @@
   }
 
   .Category:last-child {
-    margin-bottom: 0;;
+    margin-bottom: 0;
   }
 
   .Category__number {
@@ -85,6 +93,7 @@
   }
 
   .Category .AddTaskFormCategory__dot {
+    display: block;
     height: 0.625rem;
     margin-left: 0;
     width: 0.625rem;
@@ -106,6 +115,10 @@
   .Category__name {
     font-size: 1rem;
     margin-left: 0.5rem;
+  }
+
+  .Category:first-child {
+    display: flex;
   }
 
   .Category:first-child .Category__name {

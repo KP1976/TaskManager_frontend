@@ -51,13 +51,12 @@ export const App = () => {
             <h1 className="desktop-main-title">
               Aplikacja do&nbsp;zarządzania&nbsp;zadaniami
             </h1>
-            <MenuView open={mobileMenuIsOpen} />
             <TaskDetailsContext.Provider
               value={{ taskDetails, setTaskDetails }}
             >
+              <MenuView open={mobileMenuIsOpen} />
               <TasksView />
               <AddTaskView open={addTaskIsOpen} />
-
               <DesktopView />
             </TaskDetailsContext.Provider>
           </div>

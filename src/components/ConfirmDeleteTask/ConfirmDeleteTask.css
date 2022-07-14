@@ -86,9 +86,7 @@ svg path {
 
 @media (min-width: 1280px) {
   .ConfirmDeleteTask {
-    left: 19.8rem;
     padding: 1.5rem;
-    transform: translate(0, -50%);
     width: 26.25rem;
   }
 

@@ -21,15 +21,15 @@
 @media (min-width: 414px) {
   .AddTaskCategoryIcon {
     height: 3.375rem;
-    margin: 3rem auto 0;
+    margin: 3rem auto 4.5rem;
     width: 3.375rem;
   }
 }
 
-@media (min-width: 414px) {
+@media (min-width: 600px) {
   .AddTaskCategoryIcon {
     height: 4.5rem;
-    margin: 4rem auto 0;
+    margin: 0 auto 4rem;
     width: 4.5rem;
   }
 
@@ -48,7 +48,7 @@
   .AddTaskCategoryIcon {
     border: 2px solid var(--third-color);
     height: 7.5rem;
-    margin: 6rem auto 0;
+    margin: 0 auto 6rem;
     width: 7.5rem;
   }
 

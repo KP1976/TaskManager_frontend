@@ -2,6 +2,7 @@
   border-bottom: 1px solid var(--third-color);
   display: flex;
   padding: 1rem 0;
+  pointer-events: none;
 }
 
 .Task:first-child {
@@ -75,10 +76,6 @@
   }
 
   .Task__date {
-    display: none;
-  }
-
-  .Task__date {
     font-size: 1.5rem;
     font-weight: 400;
   }
@@ -113,6 +110,13 @@
 
   .Task__title {
     font-size: 1rem;
+    flex: 1;
+    align-self: flex-end;
     margin: 0;
+    pointer-events: auto;
+  }
+
+  .Task__date {
+    display: none;
   }
 }

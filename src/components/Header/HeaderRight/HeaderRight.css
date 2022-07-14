@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.HeaderRight__task-list {
+  display: none;
+}
+
 @media (min-width: 1280px) {
   .HeaderRight {
     flex-direction: column;

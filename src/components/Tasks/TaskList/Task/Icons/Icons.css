@@ -9,6 +9,7 @@
   border: none;
   margin-right: 0.5rem;
   padding: 0;
+  pointer-events: auto;
 }
 
 .Task__icons button svg {

@@ -1,4 +1,7 @@
+import { useContext } from "react";
 import { formatedDate } from "../../utils/formatedDate";
+import { AddTaskAndMobileMenuContext } from "../../context/AddTaskAndMobileMenuContext";
+import { ModifyTaskContext } from "../../context/ModifyTaskContext";
 
 import "./TaskDetails.css";
 
@@ -31,6 +34,11 @@ const months = [
 ];
 
 export const TaskDetails = ({ id, title, category, createdAt }: Props) => {
+  const { setAddTaskIsOpen, setIsModifyTask } = useContext(
+    AddTaskAndMobileMenuContext
+  );
+  const { setModifyTask } = useContext(ModifyTaskContext);
+
   let dotColor = "";
   const day = formatedDate(createdAt).split(",")[0].split(".")[0];
   const month =
@@ -55,6 +63,12 @@ export const TaskDetails = ({ id, title, category, createdAt }: Props) => {
       break;
   }
 
+  const modifyTaskDesktop = () => {
+    setAddTaskIsOpen(true);
+    setIsModifyTask(true);
+    setModifyTask({ id, title });
+  };
+
   return (
     <div className="TaskDetails">
       <h2 className="TaskDetails__title">szczegóły zadania</h2>
@@ -73,7 +87,12 @@ export const TaskDetails = ({ id, title, category, createdAt }: Props) => {
       </p>
       <h3 className="TaskDetails__subtitle">Godzina utworzenia zadania</h3>
       <p className="TaskDetails__task-category">{time}</p>
-      <button className="TaskDetails__modify-button">modyfikuj zadanie</button>
+      <button
+        className="TaskDetails__modify-button"
+        onClick={modifyTaskDesktop}
+      >
+        modyfikuj zadanie
+      </button>
     </div>
   );
 };

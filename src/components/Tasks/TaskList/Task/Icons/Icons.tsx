@@ -11,7 +11,7 @@ interface Props {
 }
 
 export const Icons = ({ parent, taskId, title }: Props) => {
-  const { setAddTaskIsOpen, setIsModifyTask } = useContext(
+  const { addTaskIsOpen, setAddTaskIsOpen, setIsModifyTask } = useContext(
     AddTaskAndMobileMenuContext
   );
   const { setModifyTask } = useContext(ModifyTaskContext);
@@ -44,7 +44,7 @@ export const Icons = ({ parent, taskId, title }: Props) => {
   };
 
   const modifyTask = () => {
-    setAddTaskIsOpen(true);
+    setAddTaskIsOpen(!addTaskIsOpen);
     setIsModifyTask(true);
     setModifyTask({ id: taskId, title });
   };
