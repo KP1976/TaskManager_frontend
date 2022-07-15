@@ -31,17 +31,74 @@
   line-height: 1;
 }
 
-.Tasks__add-task-button {
-  background-color: var(--secondary-color);
-  border-radius: 50%;
-  bottom: 1.5rem;
-  box-shadow: 0 5px 10px hsla(208, 58%, 14%, 40%);
-  font-size: 2.25rem;
-  font-weight: 300;
-  height: 3rem;
-  line-height: 3rem;
-  position: absolute;
-  right: 1.5rem;
-  text-align: center;
-  width: 3rem;
+@media (min-width: 414px) {
+  .Tasks {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .Tasks {
+    padding: 2rem 1.5rem 0;
+  }
+
+  .Tasks__title {
+    font-size: 1.125rem;
+  }
+
+  .Tasks__quantity-done-tasks {
+    height: 2rem;
+    margin-left: 1rem;
+    width: 2rem;
+  }
+
+  .Tasks__quantity-done-tasks span {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .Tasks {
+    padding: 3rem 4rem 0;
+  }
+
+  .Tasks__title {
+    font-size: 1.75rem;
+  }
+
+  .Tasks__quantity-done-tasks {
+    height: 3rem;
+    margin-left: 1.5rem;
+    width: 3rem;
+  }
+
+  .Tasks__quantity-done-tasks span {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .Tasks {
+    background-color: var(--primary-color);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 1.625rem 2rem 0;
+  }
+
+  .Tasks__title {
+    color: var(--gray-color);
+    font-size: 1.25rem;
+  }
+
+  .Tasks .Tasks__title:nth-child(3) {
+    display: none;
+  }
+
+  .Tasks__title::after {
+    content: " do zrobienia"
+  }
+
+  .Tasks__quantity-done-tasks {
+    display: none;
+  }
 }

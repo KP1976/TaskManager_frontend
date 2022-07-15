@@ -1,5 +1,5 @@
-import {HeaderLeft} from "./HeaderLeft/HeaderLeft";
-import {HeaderRight} from "./HeaderRight/HeaderRight";
+import { HeaderLeft } from "./HeaderLeft/HeaderLeft";
+import { HeaderRight } from "./HeaderRight/HeaderRight";
 
 import "./Header.css";
 

@@ -1,0 +1,104 @@
+.ConfirmDeleteTask {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  display: none;
+  left: 50%;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 66.6666%;
+  z-index: 2;
+}
+
+.ConfirmDeleteTask__question {
+  margin: 0 auto 1rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  width: 90%;
+}
+
+.ConfirmDeleteTask__buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ConfirmDeleteTask__button {
+  border: none;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  height: 1.5rem;
+  text-transform: uppercase;
+  width: 5rem;
+}
+
+.isVisible {
+  display: block;
+}
+
+svg {
+  pointer-events: none;
+}
+
+svg path {
+  pointer-events: none;
+}
+
+@media (min-width: 600px) {
+  .ConfirmDeleteTask {
+    padding: 1.5rem;
+    width: 60%;
+  }
+
+  .ConfirmDeleteTask__question {
+    font-size: 1.5rem;
+    margin: 0 auto 2.375rem;
+  }
+
+  .ConfirmDeleteTask__button {
+    font-size: 1rem;
+    height: 2rem;
+    width: 6.125rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .ConfirmDeleteTask {
+    padding: 2rem;
+    width: 60%;
+  }
+
+  .ConfirmDeleteTask__question {
+    font-size: 2.25rem;
+    margin: 0 auto 3.625rem;
+  }
+
+  .ConfirmDeleteTask__button {
+    font-size: 1.875rem;
+    height: 3.25rem;
+    width: 10.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .ConfirmDeleteTask {
+    padding: 1.5rem;
+    width: 26.25rem;
+  }
+
+  .ConfirmDeleteTask__question {
+    font-size: 1.75rem;
+    margin: 0 auto 2.5rem;
+  }
+
+  .ConfirmDeleteTask__button {
+    cursor: pointer;
+    font-size: 1.5rem;
+    height: 2.8125rem;
+    width: 7.1875rem;
+  }
+}
