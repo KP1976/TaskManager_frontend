@@ -1,15 +1,33 @@
 .TasksDoneList {
-  list-style: none;
   height: 100vh;
+  list-style: none;
   margin: 0;
+  max-height: 33.5rem;
+  overflow: auto;
   padding: 0;
+}
+
+@media (min-width: 414px) {
+  .TasksDoneList {
+    max-height: 38rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .TasksDoneList {
+    max-height: 42rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .TasksDoneList {
+    max-height: 64rem;
+  }
 }
 
 @media (min-width: 1280px) {
   .TasksDoneList {
-    height: auto;
     max-height: 10rem;
-    overflow: auto;
   }
 
   .TasksDoneList::-webkit-scrollbar {

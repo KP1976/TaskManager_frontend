@@ -1,6 +1,8 @@
-import { MouseEvent, SyntheticEvent, useContext } from "react";
+import { MouseEvent, useContext } from "react";
 import { AddTaskAndMobileMenuContext } from "../../../../../context/AddTaskAndMobileMenuContext";
 import { ModifyTaskContext } from "../../../../../context/ModifyTaskContext";
+import { TasksContext } from "../../../../../context/TasksContext";
+import { SingleTask } from "../../../../../interfaces/TaskInterface";
 import { getErrorMessage } from "../../../../../utils/getErrorMessage";
 
 import "./Icons.css";
@@ -16,6 +18,7 @@ export const Icons = ({ parent, taskId, title }: Props) => {
     AddTaskAndMobileMenuContext
   );
   const { setModifyTask } = useContext(ModifyTaskContext);
+  const { tasks, setTasks } = useContext(TasksContext);
 
   const makeTaskDone = (e: MouseEvent<HTMLButtonElement>) => {
     const task = e.currentTarget.parentElement?.parentElement;
@@ -32,11 +35,15 @@ export const Icons = ({ parent, taskId, title }: Props) => {
             }),
           }
         );
-        await response.json();
+        const data = (await response.json()) as SingleTask;
         task?.classList.add("fade");
 
+        const newTasks = tasks.map((x) =>
+          x.id === data.id ? { ...x, isDone: 1 } : x
+        );
+
         setTimeout(() => {
-          location.reload();
+          setTasks(newTasks);
         }, 500);
       } catch (err) {
         getErrorMessage(err);
@@ -50,7 +57,7 @@ export const Icons = ({ parent, taskId, title }: Props) => {
     setModifyTask({ id: taskId, title });
   };
 
-  const deleteTask = (e: SyntheticEvent<HTMLButtonElement>) => {
+  const deleteTask = (e: MouseEvent<HTMLButtonElement>) => {
     const confirmDeleteModal =
       e.currentTarget.parentElement?.parentElement?.parentElement?.parentElement
         ?.nextElementSibling;
