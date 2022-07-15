@@ -1,6 +1,7 @@
 import { MouseEvent, SyntheticEvent, useContext } from "react";
 import { AddTaskAndMobileMenuContext } from "../../../../../context/AddTaskAndMobileMenuContext";
 import { ModifyTaskContext } from "../../../../../context/ModifyTaskContext";
+import { getErrorMessage } from "../../../../../utils/getErrorMessage";
 
 import "./Icons.css";
 
@@ -11,7 +12,7 @@ interface Props {
 }
 
 export const Icons = ({ parent, taskId, title }: Props) => {
-  const { setAddTaskIsOpen, setIsModifyTask } = useContext(
+  const { addTaskIsOpen, setAddTaskIsOpen, setIsModifyTask } = useContext(
     AddTaskAndMobileMenuContext
   );
   const { setModifyTask } = useContext(ModifyTaskContext);
@@ -38,13 +39,13 @@ export const Icons = ({ parent, taskId, title }: Props) => {
           location.reload();
         }, 500);
       } catch (err) {
-        console.log({ err });
+        getErrorMessage(err);
       }
     })();
   };
 
   const modifyTask = () => {
-    setAddTaskIsOpen(true);
+    setAddTaskIsOpen(!addTaskIsOpen);
     setIsModifyTask(true);
     setModifyTask({ id: taskId, title });
   };
@@ -64,8 +65,6 @@ export const Icons = ({ parent, taskId, title }: Props) => {
       <button onClick={(e) => makeTaskDone(e)}>
         <svg
           className="icon"
-          width="12"
-          height="12"
           viewBox="0 0 12 12"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -78,8 +77,6 @@ export const Icons = ({ parent, taskId, title }: Props) => {
       <button onClick={modifyTask}>
         <svg
           className="icon"
-          width="12"
-          height="12"
           viewBox="0 0 12 12"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -107,8 +104,6 @@ export const Icons = ({ parent, taskId, title }: Props) => {
       <button onClick={deleteTask}>
         <svg
           className="icon"
-          width="12"
-          height="12"
           viewBox="0 0 12 12"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

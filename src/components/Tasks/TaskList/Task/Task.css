@@ -2,6 +2,7 @@
   border-bottom: 1px solid var(--third-color);
   display: flex;
   padding: 1rem 0;
+  pointer-events: none;
 }
 
 .Task:first-child {
@@ -23,7 +24,7 @@
 .Task__date {
   color: var(--third-color);
   font-size: 0.75rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .fade {
@@ -36,5 +37,86 @@
   }
   to {
     opacity: 0;
+  }
+}
+
+@media (min-width: 414px) {
+  .Task {
+    padding: 1.5rem 0;
+  }
+}
+
+@media (min-width: 600px) {
+  .Task {
+    border-bottom: 2px solid var(--third-color);
+  }
+
+  .Task__title {
+    font-size: 1.125rem;
+    margin: 0.25rem 0 0.75rem;
+  }
+
+  .Task__texts {
+    justify-content: start;
+  }
+
+  .Task__date {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .Task {
+    padding: 2.5rem 0 1.75rem 0;
+  }
+
+  .Task__title {
+    font-size: 1.75rem;
+    margin: 0.25rem 0 1rem;
+  }
+
+  .Task__date {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1280px) {
+  .Task {
+    align-items: center;
+    border: 1px solid var(--secondary-color);
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .Task:hover {
+    background-color: var(--secondary-color);
+  }
+
+  .Task:hover .Task__icons button svg path {
+    fill: var(--primary-color);
+  }
+
+  .Task:first-child {
+    padding-top: 0.75rem;
+  }
+
+  .Task:last-child {
+    margin-bottom: 0;
+  }
+
+  .Task__title {
+    font-size: 1rem;
+    flex: 1;
+    align-self: flex-end;
+    margin: 0;
+    pointer-events: auto;
+  }
+
+  .Task__date {
+    display: none;
   }
 }

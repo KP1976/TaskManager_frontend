@@ -1,3 +1,40 @@
+.container {
+  width: 10rem;
+  height: 0;
+  padding-bottom: 2.5rem;
+  padding-top: 1rem;
+  position: relative;
+}
+
 .LineUnderTitle {
-  margin-bottom: 2.125rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+@media (min-width: 414px) {
+  .container {
+    padding-bottom: 3.25rem;
+    width: 10.5rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .container {
+    padding-bottom: 2.5rem;
+    width: 16rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    padding-bottom: 5rem;
+    width: 23rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    display: none;
+  }
 }

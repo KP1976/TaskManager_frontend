@@ -1,24 +1,35 @@
 import { formatedDate } from "../../../../utils/formatedDate";
+import { CategoryIcon } from "../../../Tasks/TaskList/Task/CategoryIcon/CategoryIcon";
 
 import "./TaskDone.css";
 
 interface Props {
   id: string;
+  category: string;
   createdAt: Date;
   title: string;
 }
 
 export const TaskDone = (props: Props) => {
-  const { title, createdAt } = props;
+  const { title, category, createdAt } = props;
 
   return (
     <li className="TaskDone">
+      <CategoryIcon category={category} color={"black"} />
       <h3 className="TaskDone__title">{title}</h3>
       <span className="TaskDone__date">{formatedDate(createdAt)}</span>
       <svg
+        className="TaskDoneDesktop__icon"
+        viewBox="0 0 12 12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill="#0F2538"
+          d="M11.7482 0.67151C12.083 1.10425 12.083 1.80356 11.7482 2.2363L4.89107 11.0988C4.55625 11.5315 4.01518 11.5315 3.68036 11.0988L0.251036 6.66755C-0.0836786 6.23481 -0.0836786 5.5355 0.251036 5.10276C0.585804 4.67002 1.12848 4.67002 1.4633 5.10276L4.26161 8.74816L10.5375 0.67151C10.8723 0.238078 11.4134 0.238078 11.7482 0.67151Z"
+        />
+      </svg>
+      <svg
         className="TaskDone__icon"
-        width="32"
-        height="31"
         viewBox="0 0 32 31"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

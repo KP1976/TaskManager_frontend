@@ -4,3 +4,16 @@
   margin: 0;
   padding: 0;
 }
+
+@media (min-width: 1280px) {
+  .TasksDoneList {
+    height: auto;
+    max-height: 10rem;
+    overflow: auto;
+  }
+
+  .TasksDoneList::-webkit-scrollbar {
+    width: 0;
+    background: transparent; /* make scrollbar transparent */
+  }
+}

@@ -1,22 +1,22 @@
-import { ChangeEvent, useContext, useState } from "react";
+import React, { ChangeEvent, useContext, useState } from "react";
 import { AddTaskFormCategories } from "./AddTaskFormCategories/AddTaskFormCategories";
 import { SingleTask } from "../../../interfaces/TaskInterface";
 import { ModifyTaskContext } from "../../../context/ModifyTaskContext";
+import { AddTaskCategoryIcon } from "./AddTaskCategoryIcon/AddTaskCategoryIcon";
+import { getErrorMessage } from "../../../utils/getErrorMessage";
 
 import "./AddTaskForm.css";
 
 interface Props {
-  grandFather: (value: string) => void;
   isModifyTask: boolean;
 }
 
-export const AddTaskForm = ({ isModifyTask, grandFather }: Props) => {
+export const AddTaskForm = ({ isModifyTask }: Props) => {
   const { modifyTask } = useContext(ModifyTaskContext);
   const [taskTitle, setTaskTitle] = useState("");
   const [taskCategory, setTaskCategory] = useState("rekreacja");
 
   const parent = (value: string) => {
-    grandFather(value);
     setTaskCategory(value);
   };
 
@@ -42,7 +42,7 @@ export const AddTaskForm = ({ isModifyTask, grandFather }: Props) => {
         const task = (await response.json()) as SingleTask;
         console.log(task);
       } catch (err) {
-        console.log({ err });
+        getErrorMessage(err);
       }
     })();
   };
@@ -65,7 +65,7 @@ export const AddTaskForm = ({ isModifyTask, grandFather }: Props) => {
         const task = (await response.json()) as SingleTask;
         console.log(task);
       } catch (err) {
-        console.log({ err });
+        getErrorMessage(err);
       }
     })();
   };
@@ -75,6 +75,8 @@ export const AddTaskForm = ({ isModifyTask, grandFather }: Props) => {
       className="AddTaskForm"
       onSubmit={!isModifyTask ? addTask : () => handleModifyTask(modifyTask.id)}
     >
+      <AddTaskCategoryIcon category={taskCategory} />
+      <p className="AddTaskForm__categories-title">Typ zadania</p>
       <AddTaskFormCategories parent={parent} />
 
       <label className="AddTaskForm__label" htmlFor="task-title">
@@ -91,7 +93,11 @@ export const AddTaskForm = ({ isModifyTask, grandFather }: Props) => {
       </label>
 
       <button type="submit" className="AddTaskForm__submit-button">
-        {isModifyTask ? "modyfikuj zadanie" : "dodaj zadanie"}
+        {isModifyTask ? (
+          <span>modyfikuj zadanie</span>
+        ) : (
+          <span>dodaj zadanie</span>
+        )}
       </button>
     </form>
   );

@@ -2,6 +2,7 @@
   --primary-color: hsl(208, 58%, 14%);
   --secondary-color: hsl(201, 53%, 40%);
   --third-color: hsl(201, 31%, 56%);
+  --gray-color: hsl(0, 0%, 77%);
 
   --recreation-color: hsl(36, 81%, 50%);
   --technology-color: hsl(65, 78%, 57%);
@@ -24,6 +25,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
   overflow: hidden;
+}
+
+@media (min-width: 1280px) {
+  body {
+    background: linear-gradient(180deg, #000000 0%, #0F2538 100%)
+  }
 }
 
 code {

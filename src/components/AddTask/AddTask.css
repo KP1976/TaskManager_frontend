@@ -6,6 +6,7 @@
   transform: translateX(100%);
   transition: transform 0.2s ease-in-out;
   width: 100%;
+  z-index: 1;
 }
 
 .AddTask.show {
@@ -19,6 +20,10 @@
   position: fixed;
 }
 
+.AddTask__back-icon svg {
+  height: 1rem;
+}
+
 .AddTask__title {
   font-weight: 700;
   font-size: 1rem;
@@ -26,4 +31,79 @@
   margin: 0;
   text-align: center;
   text-transform: uppercase;
+}
+
+.AddTask__title-desktop {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .AddTask {
+    padding: 1.5rem 3rem 0;
+  }
+
+  .AddTask__back-icon {
+    left: 1.25rem;
+  }
+
+  .AddTask__back-icon svg {
+    height: 1.5rem;
+  }
+
+  .AddTask__title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .AddTask {
+    padding: 4rem 9.375rem 0;
+  }
+
+  .AddTask__back-icon {
+    top: 2rem;
+    left: 2rem;
+  }
+
+  .AddTask__back-icon svg {
+    height: 2rem;
+  }
+
+  .AddTask__title {
+    font-size: 2.375rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .AddTask {
+    background-color: var(--primary-color);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    grid-column: 3 /4;
+    grid-row: 2 / -1;
+    height: auto;
+    padding: 1.625rem 2rem 3.75rem;
+    position: static;
+    transform: translate(0, 100%);
+    width: auto;
+  }
+
+  .AddTask__back-icon {
+    display: none;
+  }
+
+  .AddTask__title {
+    display: none;
+  }
+
+  .AddTask__title-desktop {
+    color: var(--gray-color);
+    display: block;
+    font-size: 1.25rem;
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+  }
 }

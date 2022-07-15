@@ -1,0 +1,47 @@
+.ActualDate {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.ActualDate-desktop-container {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .ActualDate {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .ActualDate {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1280px) {
+  .ActualDate {
+    display: none;
+  }
+
+  .ActualDate-desktop-container {
+    display: flex;
+    flex-direction: column;
+    margin: 2.5rem 0 7rem;
+    padding: 0 3.25rem;
+  }
+
+  .ActualDate-desktop-container-date {
+    margin: 0 0 1rem 0;
+  }
+
+  .ActualDate-desktop-container-date__year,
+  .ActualDate-desktop-container-date__month,
+  .ActualDate-desktop-container-date__day,
+  .ActualDate-desktop-container-date__day-of-the-week {
+    color: var(--third-color);
+  }
+}

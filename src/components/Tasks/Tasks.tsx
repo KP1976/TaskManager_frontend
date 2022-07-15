@@ -4,13 +4,16 @@ import { AddTaskAndMobileMenuContext } from "../../context/AddTaskAndMobileMenuC
 import { TasksContext } from "../../context/TasksContext";
 
 import "./Tasks.css";
+import { AddTaskButton } from "./AddTaskButton/AddTaskButton";
 
 interface Props {
   grandGrandGrandFather: (value: string) => void;
 }
 
 export const Tasks = ({ grandGrandGrandFather }: Props) => {
-  const { setAddTaskIsOpen } = useContext(AddTaskAndMobileMenuContext);
+  const { addTaskIsOpen, setAddTaskIsOpen } = useContext(
+    AddTaskAndMobileMenuContext
+  );
   const { tasks } = useContext(TasksContext);
 
   const sumOfTasksDone = tasks
@@ -18,7 +21,7 @@ export const Tasks = ({ grandGrandGrandFather }: Props) => {
     .reduce((prev, curr) => prev + curr, 0);
 
   const showAddTask = () => {
-    setAddTaskIsOpen(true);
+    setAddTaskIsOpen(!addTaskIsOpen);
   };
 
   const grandGrandFather = (value: string) => {
@@ -33,9 +36,7 @@ export const Tasks = ({ grandGrandGrandFather }: Props) => {
       <div className="Tasks__quantity-done-tasks">
         <span>{sumOfTasksDone}</span>
       </div>
-      <button className="Tasks__add-task-button" onClick={showAddTask}>
-        +
-      </button>
+      <AddTaskButton showAddTask={showAddTask} />
     </main>
   );
 };

@@ -3,3 +3,31 @@
   margin: 0 0 2rem 0;
   padding: 0;
 }
+
+@media (min-width: 414px) {
+  .AddTaskFormCategories {
+    margin: 0 0 4rem 0;
+  }
+}
+
+@media (min-width: 600px) {
+  .AddTaskFormCategories {
+    margin: 0 0 3.5rem 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .AddTaskFormCategories {
+    margin: 0 0 4.5rem 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .AddTaskFormCategories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5.875rem;
+    margin: 0 0 12rem 0;
+    order: 2;
+  }
+}

@@ -4,4 +4,6 @@ interface Props {
   open: boolean;
 }
 
-export const AddTaskView = ({ open }: Props) => <AddTask isOpen={open} />;
+export const AddTaskView = ({ open }: Props) => {
+  return <AddTask isOpen={open} />;
+};

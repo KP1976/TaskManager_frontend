@@ -11,7 +11,7 @@
 }
 
 .AddTaskFormCategory__name {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 0.875rem;
   line-height: 1;
   text-transform: capitalize;
@@ -55,12 +55,13 @@
 }
 
 .AddTaskFormCategory__radio-container .AddTaskFormCategory__checkmark:after {
-  top: 2px;
-  right: 2px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
   background: var(--third-color);
+  border-radius: 50%;
+  height: 6px;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 6px;
 }
 
 .AddTaskFormCategory__radio-container:hover ~ .AddTaskFormCategory__checkmark {
@@ -89,3 +90,105 @@
   content: "";
   position: absolute;
 }
+
+@media (min-width: 414px) {
+  .AddTaskFormCategory {
+    margin-bottom: 2rem;
+    padding-bottom: 0.875rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .AddTaskFormCategory {
+    border-bottom: 2px solid var(--third-color);
+    padding-bottom: 1.125rem;
+  }
+
+  .AddTaskFormCategory__name {
+    font-size: 1.125rem;
+  }
+
+  .AddTaskFormCategory__dot {
+    height: 0.5rem;
+    margin-left: 1rem;
+    width: 0.5rem;
+  }
+
+  .AddTaskFormCategory__checkmark {
+    border: 2px solid white;
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .AddTaskFormCategory__radio-container .AddTaskFormCategory__checkmark:after {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .AddTaskFormCategory {
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .AddTaskFormCategory__name {
+    font-size: 1.75rem;
+  }
+
+  .AddTaskFormCategory__dot {
+    height: 0.75rem;
+    width: 0.75rem;
+  }
+
+  .AddTaskFormCategory__checkmark {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  .AddTaskFormCategory__radio-container .AddTaskFormCategory__checkmark:after {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .AddTaskFormCategory {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0.875rem;
+  }
+
+  .AddTaskFormCategory__name {
+    font-size: 1rem;
+    order: 1;
+  }
+
+  .AddTaskFormCategory__dot {
+    height: 0.625rem;
+    margin-left: 0;
+    margin-right: 0.5rem;
+    order: 0;
+    width: 0.625rem;
+  }
+
+  .AddTaskFormCategory__checkmark {
+    border: 2px solid var(--third-color);
+    height: 1.125rem;
+    order: 2;
+    top: -3px;
+    right: -110px;
+    width: 1.125rem;
+  }
+
+  .AddTaskFormCategory__radio-container {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .AddTaskFormCategory__radio-container .AddTaskFormCategory__checkmark:after {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}
+

@@ -6,3 +6,16 @@
   margin: 0;
   padding: 0;
 }
+
+@media (min-width: 900px) {
+  .CategoryList {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1280px) {
+  .CategoryList {
+    margin: 2.5rem 0;
+    padding: 0 3.25rem;
+  }
+}
