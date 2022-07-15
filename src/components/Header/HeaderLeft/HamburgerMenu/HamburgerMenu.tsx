@@ -19,7 +19,11 @@ export const HamburgerMenu = () => {
   };
 
   return (
-    <button className="HamburgerMenu" onClick={toggleMobileMenu}>
+    <button
+      className="HamburgerMenu"
+      aria-label="Hamburger menu of Task Done List"
+      onClick={toggleMobileMenu}
+    >
       <div ref={topBarMenu} className="HamburgerMenu__top"></div>
       <div ref={middleBarMenu} className="HamburgerMenu__middle"></div>
       <div ref={bottomBarMenu} className="HamburgerMenu__bottom"></div>

@@ -17,9 +17,10 @@
   background-color: var(--third-color);
   border: none;
   border-radius: 3px;
-  color: white;
+  color: black;
   display: block;
   font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
   height: 2rem;
   margin-top: 0.625rem;
   padding: 0 0.5rem;

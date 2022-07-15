@@ -20,7 +20,11 @@ export const AddTask = ({ isOpen }: Props) => {
 
   return (
     <div className={isOpen ? "AddTask show" : "AddTask"}>
-      <button className="AddTask__back-icon" onClick={handleClick}>
+      <button
+        className="AddTask__back-icon"
+        onClick={handleClick}
+        aria-label="Back to main page button"
+      >
         <svg viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clipPath="url(#clip0_21_72)">
             <path

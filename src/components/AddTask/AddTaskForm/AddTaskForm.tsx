@@ -92,7 +92,11 @@ export const AddTaskForm = ({ isModifyTask }: Props) => {
         />
       </label>
 
-      <button type="submit" className="AddTaskForm__submit-button">
+      <button
+        type="submit"
+        className="AddTaskForm__submit-button"
+        aria-label="Submit add task button"
+      >
         {isModifyTask ? (
           <span>modyfikuj zadanie</span>
         ) : (

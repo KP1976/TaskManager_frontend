@@ -69,7 +69,10 @@ export const Icons = ({ parent, taskId, title }: Props) => {
 
   return (
     <div className="Task__icons">
-      <button onClick={(e) => makeTaskDone(e)}>
+      <button
+        onClick={(e) => makeTaskDone(e)}
+        aria-label="Make task done button"
+      >
         <svg
           className="icon"
           viewBox="0 0 12 12"
@@ -81,7 +84,7 @@ export const Icons = ({ parent, taskId, title }: Props) => {
           />
         </svg>
       </button>
-      <button onClick={modifyTask}>
+      <button onClick={modifyTask} aria-label="Modify task button">
         <svg
           className="icon"
           viewBox="0 0 12 12"
@@ -108,7 +111,7 @@ export const Icons = ({ parent, taskId, title }: Props) => {
           </defs>
         </svg>
       </button>
-      <button onClick={deleteTask}>
+      <button onClick={deleteTask} aria-label="Delete task button">
         <svg
           className="icon"
           viewBox="0 0 12 12"
