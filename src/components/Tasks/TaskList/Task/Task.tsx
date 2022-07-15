@@ -17,7 +17,9 @@ interface Props {
 
 export const Task = (props: Props) => {
   const { id, category, title, createdAt, grandFather } = props;
-  const { setAddTaskIsOpen } = useContext(AddTaskAndMobileMenuContext);
+  const { setAddTaskIsOpen, setIsModifyTask } = useContext(
+    AddTaskAndMobileMenuContext
+  );
   const { setTaskDetails } = useContext(TaskDetailsContext);
 
   const parent = (value: string) => {
@@ -26,6 +28,7 @@ export const Task = (props: Props) => {
 
   const handleClick = () => {
     setAddTaskIsOpen(false);
+    setIsModifyTask(true);
     setTaskDetails({ id, category, title, createdAt });
   };
 

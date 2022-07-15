@@ -28,9 +28,10 @@ export const App = () => {
     void (async () => {
       const response = await fetch("http://localhost:3001/api/tasks/");
       const data = (await response.json()) as SingleTask[];
+      const filteredData = data.filter((task) => !task.isDone);
 
       setTasks(data);
-      setTaskDetails(data[0]);
+      setTaskDetails(filteredData[0]);
     })();
   }, []);
 

@@ -2,9 +2,10 @@ import React, { ChangeEvent, useContext, useState } from "react";
 import { AddTaskFormCategories } from "./AddTaskFormCategories/AddTaskFormCategories";
 import { SingleTask } from "../../../interfaces/TaskInterface";
 import { ModifyTaskContext } from "../../../context/ModifyTaskContext";
+import { AddTaskCategoryIcon } from "./AddTaskCategoryIcon/AddTaskCategoryIcon";
+import { getErrorMessage } from "../../../utils/getErrorMessage";
 
 import "./AddTaskForm.css";
-import { AddTaskCategoryIcon } from "./AddTaskCategoryIcon/AddTaskCategoryIcon";
 
 interface Props {
   isModifyTask: boolean;
@@ -41,7 +42,7 @@ export const AddTaskForm = ({ isModifyTask }: Props) => {
         const task = (await response.json()) as SingleTask;
         console.log(task);
       } catch (err) {
-        console.log({ err });
+        getErrorMessage(err);
       }
     })();
   };
@@ -64,7 +65,7 @@ export const AddTaskForm = ({ isModifyTask }: Props) => {
         const task = (await response.json()) as SingleTask;
         console.log(task);
       } catch (err) {
-        console.log({ err });
+        getErrorMessage(err);
       }
     })();
   };

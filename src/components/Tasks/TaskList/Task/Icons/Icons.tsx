@@ -1,6 +1,7 @@
 import { MouseEvent, SyntheticEvent, useContext } from "react";
 import { AddTaskAndMobileMenuContext } from "../../../../../context/AddTaskAndMobileMenuContext";
 import { ModifyTaskContext } from "../../../../../context/ModifyTaskContext";
+import { getErrorMessage } from "../../../../../utils/getErrorMessage";
 
 import "./Icons.css";
 
@@ -38,7 +39,7 @@ export const Icons = ({ parent, taskId, title }: Props) => {
           location.reload();
         }, 500);
       } catch (err) {
-        console.log({ err });
+        getErrorMessage(err);
       }
     })();
   };
