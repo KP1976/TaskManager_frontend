@@ -4,6 +4,7 @@ import { ModifyTaskContext } from "../../../../../context/ModifyTaskContext";
 import { TasksContext } from "../../../../../context/TasksContext";
 import { SingleTask } from "../../../../../interfaces/TaskInterface";
 import { getErrorMessage } from "../../../../../utils/getErrorMessage";
+import { apiUrl } from "../../../../../config/api";
 
 import "./Icons.css";
 
@@ -25,16 +26,13 @@ export const Icons = ({ parent, taskId, title }: Props) => {
 
     void (async () => {
       try {
-        const response = await fetch(
-          `http://localhost:3001/api/tasks/${taskId}/1`,
-          {
-            method: "PATCH",
-            body: JSON.stringify({
-              id: taskId,
-              isDone: 1,
-            }),
-          }
-        );
+        const response = await fetch(`${apiUrl}/tasks/${taskId}/1`, {
+          method: "PATCH",
+          body: JSON.stringify({
+            id: taskId,
+            isDone: 1,
+          }),
+        });
         const data = (await response.json()) as SingleTask;
         task?.classList.add("fade");
 

@@ -4,6 +4,7 @@ import { SingleTask } from "../../../interfaces/TaskInterface";
 import { ModifyTaskContext } from "../../../context/ModifyTaskContext";
 import { AddTaskCategoryIcon } from "./AddTaskCategoryIcon/AddTaskCategoryIcon";
 import { getErrorMessage } from "../../../utils/getErrorMessage";
+import { apiUrl } from "../../../config/api";
 
 import "./AddTaskForm.css";
 
@@ -32,7 +33,7 @@ export const AddTaskForm = ({ isModifyTask }: Props) => {
 
     void (async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/tasks", {
+        const response = await fetch(`${apiUrl}/tasks`, {
           method: "POST",
           mode: "cors",
           headers: { "Content-Type": "application/json" },
@@ -52,7 +53,7 @@ export const AddTaskForm = ({ isModifyTask }: Props) => {
 
     void (async () => {
       try {
-        const response = await fetch(`http://localhost:3001/api/tasks/${id}`, {
+        const response = await fetch(`${apiUrl}/tasks/${id}`, {
           method: "PATCH",
           mode: "cors",
           headers: { "Content-Type": "application/json" },

@@ -1,5 +1,6 @@
 import "./ConfirmDeleteTask.css";
 import { useRef } from "react";
+import { apiUrl } from "../../config/api";
 
 interface Props {
   taskId: string;
@@ -15,7 +16,7 @@ export const ConfirmDeleteTask = ({ taskId }: Props) => {
   const clickYes = () => {
     void (async () => {
       try {
-        await fetch(`http://localhost:3001/api/tasks/${taskId}`, {
+        await fetch(`${apiUrl}/tasks/${taskId}`, {
           method: "DELETE",
         });
         location.reload();

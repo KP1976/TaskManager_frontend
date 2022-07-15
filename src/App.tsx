@@ -8,6 +8,7 @@ import { TasksView } from "./views/TasksView";
 import { AddTaskView } from "./views/AddTaskView";
 import { DesktopView } from "./views/DesktopView";
 import { SingleTask } from "./interfaces/TaskInterface";
+import { apiUrl } from "./config/api";
 
 import "./App.css";
 
@@ -26,7 +27,7 @@ export const App = () => {
 
   useEffect(() => {
     void (async () => {
-      const response = await fetch("http://localhost:3001/api/tasks/");
+      const response = await fetch(`${apiUrl}/tasks/`);
       const data = (await response.json()) as SingleTask[];
       const filteredData = data.filter((task) => !task.isDone);
 
