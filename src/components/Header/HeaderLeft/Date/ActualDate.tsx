@@ -8,13 +8,13 @@ export const ActualDate = () => {
   const day = new Date().getDate();
   const dayOfTheWeek = new Date().getDay();
   const daysOfTheWeek = [
+    "niedziela",
     "poniedziałek",
     "wtorek",
     "środa",
     "czwartek",
     "piątek",
     "sobota",
-    "niedziela",
   ];
   const months = [
     "styczeń",
@@ -30,6 +30,8 @@ export const ActualDate = () => {
     "listopad",
     "grudzień",
   ];
+
+  console.log(dayOfTheWeek);
 
   return (
     <>
@@ -52,7 +54,7 @@ export const ActualDate = () => {
             {day},{" "}
           </span>
           <span className="ActualDate-desktop-container-date__day-of-the-week">
-            {daysOfTheWeek[dayOfTheWeek - 1]}
+            {daysOfTheWeek[dayOfTheWeek]}
           </span>
         </p>
       </div>
