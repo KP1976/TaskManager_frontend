@@ -31,8 +31,6 @@ export const ActualDate = () => {
     "grudzień",
   ];
 
-  console.log(dayOfTheWeek);
-
   return (
     <>
       <div className="ActualDate-desktop-container">

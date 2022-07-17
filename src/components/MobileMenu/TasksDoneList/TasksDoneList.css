@@ -7,6 +7,11 @@
   padding: 0;
 }
 
+.TasksDoneList::-webkit-scrollbar {
+  width: 0;
+  background: transparent; /* make scrollbar transparent */
+}
+
 @media (min-width: 414px) {
   .TasksDoneList {
     max-height: 38rem;
@@ -28,10 +33,5 @@
 @media (min-width: 1280px) {
   .TasksDoneList {
     max-height: 12rem;
-  }
-
-  .TasksDoneList::-webkit-scrollbar {
-    width: 0;
-    background: transparent; /* make scrollbar transparent */
   }
 }
