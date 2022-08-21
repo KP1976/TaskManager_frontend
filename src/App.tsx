@@ -7,7 +7,8 @@ import { MenuView } from "./views/MenuView";
 import { TasksView } from "./views/TasksView";
 import { AddTaskView } from "./views/AddTaskView";
 import { DesktopView } from "./views/DesktopView";
-import { SingleTask } from "./interfaces/TaskInterface";
+// import { SingleTask } from "./interfaces/TaskInterface";
+import { TaskEntity } from "types";
 import { apiUrl } from "./config/api";
 
 import "./App.css";
@@ -16,7 +17,7 @@ export const App = () => {
   const [addTaskIsOpen, setAddTaskIsOpen] = useState(false);
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
   const [isModifyTask, setIsModifyTask] = useState(false);
-  const [tasks, setTasks] = useState<SingleTask[]>([]);
+  const [tasks, setTasks] = useState<TaskEntity[]>([]);
   const [taskDetails, setTaskDetails] = useState({
     id: "",
     title: "",
@@ -28,7 +29,7 @@ export const App = () => {
   useEffect(() => {
     void (async () => {
       const response = await fetch(`${apiUrl}/tasks/`);
-      const data = (await response.json()) as SingleTask[];
+      const data = (await response.json()) as TaskEntity[];
       const filteredData = data.filter((task) => !task.isDone);
 
       setTasks(data);
